@@ -1,7 +1,8 @@
 ---
-const { header, centered } = Astro.props as {
+const { centered, header } = Astro.props as {
   header: string;
   centered: boolean;
+  children: any;
 };
 
 const center = centered ? "text-center" : "";
@@ -11,10 +12,16 @@ const center = centered ? "text-center" : "";
   <div class="text-purple text-2xl mt-[-2px] flex flex-col justify-center">
     <div>&lt;</div>
   </div>
-  <div class="xl:max-w-[99rem] max-w-[11rem] px-2">
-    <h3 class=`${center}`>{header}</h3>
+  <div class="max-w-[14rem] px-2">
+    <h3 class=`${center} font-semibold`>{header}</h3>
   </div>
   <div class="text-purple text-2xl mt-[-2px] flex flex-col justify-center">
     <div>&gt;</div>
   </div>
 </div>
+
+<style>
+  h3 {
+    z-index: 10;
+  }
+</style>

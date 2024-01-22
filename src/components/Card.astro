@@ -4,13 +4,47 @@ import H3 from "../components/H3.astro";
 export interface Props {
   header: string;
   text: string;
+  className?: string;
 }
 
-const { header, text } = Astro.props as Props;
+const { header, text, className } = Astro.props as Props;
 ---
 
 <!-- Card HTML structure -->
-<div class="border border-white px-4 py-6">
-  <H3 header={header} centered="True" />
+<div class={`card px-4 pb-6 flex flex-col items-center ${className ?? ""} `}>
+  <div class="max-w-36 flex items-center w-full">
+    <img src="src/images/icons/icon.png" alt="Thomas" class="rounded-xl" />
+  </div>
+  <H3 centered="True" header={header} />
   <p class="text-center">{text}</p>
 </div>
+
+<style>
+  .card {
+    position: relative;
+    background-image: url("src/images/backgrounds/gradient-600.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    z-index: 1;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .card p,
+  h3 {
+    position: relative;
+    z-index: 2;
+  }
+</style>
