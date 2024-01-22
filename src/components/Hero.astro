@@ -1,0 +1,29 @@
+---
+import Button from "./Button.astro";
+---
+
+<div class="grid grid-cols-3 gap-6 w-full py-12" id="header-content">
+  <div class="col-span-2 md:pr-12 flex flex-col gap-7" id="header-text">
+    <h1>
+      Hi! I'm Thomas. <br /> I bring websites & digital applications to life.
+    </h1>
+    <p>
+      With a holistic skillset of engineering, user behavior, and product
+      strategy, I turn thoughts into tangible realities.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <Button text="Get in Touch" type="primary" />
+      <Button text="See My Work" type="transparent" />
+    </div>
+    <div class="text-sm uppercase underline flex flex-wrap gap-5">
+      <div>Full-Stack Development</div>
+      <div>UX/UI</div>
+      <div>Product Strategy</div>
+
+      <div>Data Analysis</div>
+    </div>
+  </div>
+  <div class="col-span-1" id="header-image">
+    <img src="https://placehold.co/400x450" alt="Thomas" class="rounded-xl" />
+  </div>
+</div>

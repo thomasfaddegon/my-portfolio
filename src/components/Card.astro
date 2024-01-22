@@ -1,0 +1,16 @@
+---
+import H3 from "../components/H3.astro";
+
+export interface Props {
+  header: string;
+  text: string;
+}
+
+const { header, text } = Astro.props as Props;
+---
+
+<!-- Card HTML structure -->
+<div class="border border-white px-4 py-6">
+  <H3 header={header} centered="True" />
+  <p class="text-center">{text}</p>
+</div>

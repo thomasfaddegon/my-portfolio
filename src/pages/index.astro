@@ -1,8 +1,19 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
+import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import Card from "../components/Card.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+// Import the getImage function and the image you want to optimize
+import { getImage } from "astro:assets";
+import gradientBackground from "../images/backgrounds/gradient-1600.png";
+
+// Use getImage() to optimize the image
+const optimizedBackground = await getImage({
+  src: gradientBackground,
+});
 ---
 
 <!doctype html>
@@ -12,26 +23,64 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   </head>
   <body>
     <main>
-      <container class="padding-global">
-        <div class="gradient-background">
-          <Header title={SITE_TITLE} />
-          <h1>
-            Hi! I'm Thomas. I bring websites and digital applications to life.
-          </h1>
-          <p>
-            With a holistic skillset of engineering, user behavior, and product
-            strategy, I turn thoughts into tangible realities.
-          </p>
+      <!-- Hero Section -->
+      <div
+        style={`background-image: url('${optimizedBackground.src}'); background-size: cover; background-repeat: no-repeat;`}
+        class="gradient-background"
+      >
+        <div class="container container-large">
+          <div class="padding-global">
+            <Nav title={SITE_TITLE} />
+            <Hero />
+          </div>
         </div>
-      </container>
+      </div>
+
+      <!-- 3 Boxes Section -->
+      <div class="container container-large">
+        <div class="padding-global py-24">
+          <div>
+            <h2 class="text-center mb-8">
+              Code makes things work, <br /> empathy makes them feel right.
+            </h2>
+            <p class="text-center text-xl">
+              With over a <strong>decade</strong> of experience in digital product
+              development, I create seamless digital experiences that let users achieve
+              their goals without friction, leading to higher customer satisfaction
+              and increased sales.
+            </p>
+            <div class="mt-24"></div>
+            <!-- 3 Boxes -->
+            <div>
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+              >
+                <Card
+                  header="Front-End Development"
+                  text="I specialize in cutting-edge web development technologies including Javascript, Typescript, React, Next, and Astro to build responsive, accessible, and performant web experiences."
+                />
+                <Card
+                  header="User-Experience Design"
+                  text="With an extensive background in UX copywriting, design, and research, I create seamless customer journeys and highly-intuitive interfaces that foster lasting user engagement and loyalty."
+                />
+                <Card
+                  header="Data-Driven Optimization"
+                  text="I utilize data and optimization tools like Google Analytics, Tag Manager, CrazyEgg, Optimizely, and Python/Pandas to make analytics-based improvements to improve KPI's and drive conversions."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+
+      <style>
+        .gradient-background {
+          background-image: var(--gradient-background-image);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      </style>
     </main>
-    <Footer />
-    <style>
-      .gradient-background {
-        background-image: url("/backgrounds/gradient-1600s.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-    </style>
   </body>
 </html>

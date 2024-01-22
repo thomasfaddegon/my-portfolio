@@ -1,0 +1,62 @@
+---
+const { text, type = "primary" } = Astro.props as {
+  text: string;
+  type?: ButtonType;
+};
+
+const globalClasses =
+  "button btn inline-flex items-center justify-center px-20 border rounded-full text-lg ";
+
+type ButtonType = "primary" | "secondary" | "tertiary" | "link";
+
+const typeClasses: Record<ButtonType, string> = {
+  primary:
+    "primary-button border-white transparent-text border-white.transparent-text",
+  secondary: "bg-secondary border-secondary",
+  tertiary: "bg-tertiary border-tertiary",
+  link: "bg-transparent border-transparent",
+};
+
+const buttonClasses = `button ${globalClasses} ${typeClasses[type]}`;
+---
+
+<button class={buttonClasses} data-text={text}>
+  <span class="button-text font-medium">{text}</span>
+</button>
+
+<style>
+  .button {
+    line-height: inherit;
+    padding-top: 0.75em;
+    padding-bottom: 0.7em;
+  }
+
+  .primary-button {
+    position: relative;
+    color: black;
+    mix-blend-mode: screen;
+    /* Removed overflow: hidden to allow the text to grow outside the button bounds */
+  }
+
+  .primary-button::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    border-radius: 2em;
+    content: "";
+    mix-blend-mode: color-burn;
+  }
+
+  /* .button-text {
+    line-height: 20px;
+    display: block;
+    transition: transform 0.3s ease;
+  } */
+
+  /* .primary-button:hover .button-text {
+    transform: scale(1.2);
+  } */
+</style>
