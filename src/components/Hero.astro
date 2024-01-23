@@ -2,9 +2,15 @@
 import Button from "./Button.astro";
 ---
 
-<div class="grid grid-cols-3 gap-6 w-full py-12 pb-24" id="header-content">
-  <div class="col-span-2 md:pr-12 flex flex-col gap-7" id="header-text">
-    <h1>
+<div
+  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full py-12 pb-24"
+  id="header-content"
+>
+  <div
+    class="col-span-1 lg:col-span-2 md:pr-12 flex flex-col gap-7"
+    id="header-text"
+  >
+    <h1 class="text-3xl lg:text-5xl">
       Hi! I'm Thomas. <br /> I bring websites & digital applications to life.
     </h1>
     <!-- <p>
@@ -13,8 +19,8 @@ import Button from "./Button.astro";
     </p> -->
     <p>
       With over a decade of experience in digital product development, I create
-      seamless experiences that let users achieve their goals without friction,
-      leading to higher customer satisfaction and increased sales.
+      seamless experiences that empower users to achieve their goals without
+      friction, leading to higher customer satisfaction and increased sales.
     </p>
     <div class="flex flex-wrap gap-4">
       <Button text="Get in Touch" type="primary" />
@@ -24,11 +30,10 @@ import Button from "./Button.astro";
       <div>Full-Stack Development</div>
       <div>UX/UI</div>
       <div>Product Strategy</div>
-
       <div>Data Analysis</div>
     </div>
   </div>
-  <div class="col-span-1" id="header-image">
+  <div class="col-span-1 order-first md:order-last" id="header-image">
     <img src="https://placehold.co/400x450" alt="Thomas" class="rounded-xl" />
   </div>
 </div>
