@@ -3,12 +3,14 @@ import BaseHead from "../components/BaseHead.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
+import Experience from "../components/Experience.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 // Import the getImage function and the image you want to optimize
 import { getImage } from "astro:assets";
 import gradientBackground from "../images/backgrounds/gradient-1600.png";
 import Skills from "../components/Skills.astro";
+import Philosophy from "../components/Philosophy.astro";
 
 // Use getImage() to optimize the image
 const optimizedBackground = await getImage({
@@ -38,15 +40,11 @@ const optimizedBackground = await getImage({
 
       <Skills />
 
-      <Footer />
+      <Philosophy />
 
-      <style>
-        .gradient-background {
-          background-image: var(--gradient-background-image);
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-      </style>
+      <Experience />
+
+      <Footer />
     </main>
   </body>
 </html>
