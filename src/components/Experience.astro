@@ -1,9 +1,52 @@
 ---
-
+import Position from "../components/Position.astro";
 ---
 
-<div class="min-h-96">
+<section>
   <div class="container container-large">
-    <div class="padding-global"></div>
+    <div class="padding-global py-32">
+      <h2 class="mb-12 padding-extra">Work Experience</h2>
+      <div class="flex flex-col lg:flex-row gap-24 mb-16 padding-extra">
+        <Position
+          title="title"
+          location="location"
+          years="year - year"
+          description="In the digital landscape, clean, scalable, and robust code is the cornerstone for any successful product. But even though code lays an essential foundation, success is equally determined by how a product makes its users feel. Does it anticpate user needs? Does it make a user feel valued and understood?"
+        />
+        <Position
+          title="title"
+          location="location"
+          years="year - year"
+          description="In the digital landscape, clean, scalable, and robust code is the cornerstone for any successful product. But even though code lays an essential foundation, success is equally determined by how a product makes its users feel. Does it anticpate user needs? Does it make a user feel valued and understood?"
+        />
+      </div>
+      <div class="track py-16">
+        <div class="flex flex-col lg:flex-row gap-24 padding-extra">
+          <Position
+            title="title"
+            location="location"
+            years="year - year"
+            description="In the digital landscape, clean, scalable, and robust code is the cornerstone for any successful product. But even though code lays an essential foundation, success is equally determined by how a product makes its users feel. Does it anticpate user needs? Does it make a user feel valued and understood?"
+          />
+          <Position
+            title="title"
+            location="location"
+            years="year - year"
+            description="In the digital landscape, clean, scalable, and robust code is the cornerstone for any successful product. But even though code lays an essential foundation, success is equally determined by how a product makes its users feel. Does it anticpate user needs? Does it make a user feel valued and understood?"
+          />
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
+<style>
+  .track {
+    border: 2px solid white;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+</style>
