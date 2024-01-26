@@ -47,9 +47,17 @@ main {
   padding-left: 5%;
   padding-right: 5%;
 }
+
 .padding-extra {
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+@media (max-width: 640px) {
+  .padding-extra {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .container {
@@ -87,12 +95,12 @@ h5 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 span {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* screen reader */

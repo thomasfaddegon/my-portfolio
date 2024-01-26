@@ -1,27 +1,21 @@
 ---
 import Position from "../components/Position.astro";
+import Button from "./Button.astro";
+import Certification from "./Certification.astro";
+
+import hackReactorIcon from "../images/icons/hack-reactor-icon.png";
+import hackerRankIcon from "../images/icons/hacker-rank-icon.png";
+import dataCampIcon from "../images/icons/datacamp-icon.png";
+import newPaltzIcon from "../images/icons/new-paltz-icon.png";
 ---
 
 <section>
   <div class="container container-large">
     <div class="padding-global py-32">
-      <h2 class="mb-12 padding-extra">Work Experience</h2>
-      <div class="flex flex-col lg:flex-row gap-24 mb-16 padding-extra">
-        <Position
-          title="title"
-          location="location"
-          years="year - year"
-          description="In the digital landscape, clean, scalable, and robust code is the cornerstone for any successful product. But even though code lays an essential foundation, success is equally determined by how a product makes its users feel. Does it anticpate user needs? Does it make a user feel valued and understood?"
-        />
-        <Position
-          title="title"
-          location="location"
-          years="year - year"
-          description="In the digital landscape, clean, scalable, and robust code is the cornerstone for any successful product. But even though code lays an essential foundation, success is equally determined by how a product makes its users feel. Does it anticpate user needs? Does it make a user feel valued and understood?"
-        />
-      </div>
-      <div class="track py-16">
-        <div class="flex flex-col lg:flex-row gap-24 padding-extra">
+      <!-- Work Experience -->
+      <div>
+        <h2 class="mb-12 padding-extra">Work Experience</h2>
+        <div class="flex flex-col lg:flex-row gap-24 mb-16 padding-extra">
           <Position
             title="title"
             location="location"
@@ -35,6 +29,53 @@ import Position from "../components/Position.astro";
             description="In the digital landscape, clean, scalable, and robust code is the cornerstone for any successful product. But even though code lays an essential foundation, success is equally determined by how a product makes its users feel. Does it anticpate user needs? Does it make a user feel valued and understood?"
           />
         </div>
+        <div class="track py-16">
+          <div class="flex flex-col lg:flex-row gap-24 padding-extra">
+            <Position
+              title="title"
+              location="location"
+              years="year - year"
+              description="In the digital landscape, clean, scalable, and robust code is the cornerstone for any successful product. But even though code lays an essential foundation, success is equally determined by how a product makes its users feel. Does it anticpate user needs? Does it make a user feel valued and understood?"
+            />
+            <Position
+              title="title"
+              location="location"
+              years="year - year"
+              description="In the digital landscape, clean, scalable, and robust code is the cornerstone for any successful product. But even though code lays an essential foundation, success is equally determined by how a product makes its users feel. Does it anticpate user needs? Does it make a user feel valued and understood?"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Education & Certifications -->
+      <div class="padding-extra">
+        <h2 class="mt-24 mb-16">Education & Certifications</h2>
+        <div>
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
+            <Certification
+              title="Software Engineer"
+              text="Over 1,000 hours of coding experience in new and legacy full-stack technologies, computer science foundations, and collaborations using agile methodologies."
+              image={hackReactorIcon}
+            />
+            <Certification
+              title="Python Data Analyst"
+              text="Over 1,000 hours of coding experience in new and legacy full-stack technologies, computer science foundations, and collaborations using agile methodologies."
+              image={dataCampIcon}
+            />
+            <Certification
+              title="Javascript Engineer"
+              text="Over 1,000 hours of coding experience in new and legacy full-stack technologies, computer science foundations, and collaborations using agile methodologies."
+              image={hackerRankIcon}
+            />
+            <Certification
+              title="BA & MA in English"
+              text="Over 1,000 hours of coding experience in new and legacy full-stack technologies, computer science foundations, and collaborations using agile methodologies."
+              image={newPaltzIcon}
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center mt-8 mb-8">
+        <Button text="See My Full Resume" type="tertiary" />
       </div>
     </div>
   </div>
@@ -48,5 +89,11 @@ import Position from "../components/Position.astro";
     border-bottom-left-radius: 0;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+  }
+
+  @media (max-width: 640px) {
+    .track {
+      border: none;
+    }
   }
 </style>

@@ -5,15 +5,15 @@ const { text, type = "primary" } = Astro.props as {
 };
 
 const globalClasses =
-  "button btn inline-flex items-center justify-center px-20 border rounded-full text-lg ";
+  "button btn inline-flex items-center justify-center px-20  rounded-full text-lg";
 
 type ButtonType = "primary" | "secondary" | "tertiary" | "link";
 
 const typeClasses: Record<ButtonType, string> = {
   primary:
-    "primary-button border-white transparent-text border-white.transparent-text",
-  secondary: "bg-secondary border-secondary",
-  tertiary: "bg-tertiary border-tertiary",
+    "primary-button border border-white transparent-text transparent-text",
+  secondary: "border border-white",
+  tertiary: "bg-purple",
   link: "bg-transparent border-transparent",
 };
 
@@ -35,7 +35,6 @@ const buttonClasses = `button ${globalClasses} ${typeClasses[type]}`;
     position: relative;
     color: black;
     mix-blend-mode: screen;
-    /* Removed overflow: hidden to allow the text to grow outside the button bounds */
   }
 
   .primary-button::before {

@@ -1,19 +1,20 @@
 ---
-const { centered, header } = Astro.props as {
+const { centered, header, maxWidth } = Astro.props as {
   header: string;
   centered: boolean;
-  children: any;
+  maxWidth: string;
 };
 
 const center = centered ? "text-center" : "";
+console.log("width", maxWidth);
 ---
 
 <div class="flex flex-row">
   <div class="text-purple text-2xl mt-[-2px] flex flex-col justify-center">
     <div>&lt;</div>
   </div>
-  <div class="max-w-[14rem] px-2">
-    <h3 class=`${center}`>{header}</h3>
+  <div class={`max-w-[${maxWidth}rem] px-2`}>
+    <h3 class={center}>{header}</h3>
   </div>
   <div class="text-purple text-2xl mt-[-2px] flex flex-col justify-center">
     <div>&gt;</div>
