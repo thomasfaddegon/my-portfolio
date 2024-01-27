@@ -11,6 +11,7 @@ import Experience from "../components/Experience.astro";
 import Skills from "../components/Skills.astro";
 import Philosophy from "../components/Philosophy.astro";
 import Portfolio from "../components/Portfolio.astro";
+import Testimonials from "../components/Testimonials.astro";
 
 // Use getImage() to optimize the image
 const optimizedBackground = await getImage({
@@ -45,6 +46,8 @@ const optimizedBackground = await getImage({
       <Experience />
 
       <Portfolio />
+
+      <Testimonials />
 
       <Footer />
     </main>

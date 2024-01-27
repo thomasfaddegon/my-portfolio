@@ -111,6 +111,13 @@ span {
   font-size: 1rem;
 }
 
+/* Carousel */
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: purple !important;
+}
+
 /* screen reader */
 .sr-only {
   border: 0;
