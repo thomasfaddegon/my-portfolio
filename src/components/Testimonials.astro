@@ -4,6 +4,7 @@ import "swiper/css";
 import Carousel from "./Carousel.jsx";
 import Card from "./Card.astro";
 import georgiaPettit from "../images/people/georgia-pettit.png";
+import Button from "./Button.astro";
 ---
 
 <section>
@@ -15,10 +16,12 @@ import georgiaPettit from "../images/people/georgia-pettit.png";
           <h4 class="text-center mb-10">
             Here's what my clients have had to say.
           </h4>
-          <div class="flex flex-col lg:flex-row justify-center gap-0 lg:gap-12">
+          <div
+            class="flex flex-col lg:flex-row justify-center gap-0 lg:gap-12 mb-8"
+          >
             <!-- <Carousel client:load /> -->
             <Card
-              header="John Smith, CEO @ Fake Company"
+              header="Georgia Pettit, CEO @ Luminary"
               text="Tom's data-driven approach to website optimization was a game-changer for our online business. His ability to translate analytics into actionable insights led to a remarkable increase in our conversion rates. His expertise in user engagement strategies has been invaluable to our team."
               icon={georgiaPettit}
               classes="w-full lg:w-1/2"
@@ -31,6 +34,9 @@ import georgiaPettit from "../images/people/georgia-pettit.png";
               classes="w-full lg:w-1/2"
               rounded={true}
             />
+          </div>
+          <div class="flex justify-center">
+            <Button text="Get In Touch" type="tertiary" link="/contact" />
           </div>
         </div>
       </div>
