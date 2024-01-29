@@ -9,25 +9,27 @@ import designIcon from "../images/icons/design-icon.png";
 <section>
   <div class="container container-large">
     <div class="padding-global py-36">
-      <div>
-        <h2 class="text-center mb-1">Don't just take it from me.</h2>
-        <h4 class="text-center mb-10">
-          Here's what my clients have had to say.
-        </h4>
-        <div class="flex justify-center gap-12">
-          <!-- <Carousel client:load /> -->
-          <Card
-            header="Front-End Development"
-            text="I specialize in cutting-edge web development technologies including Javascript, Typescript, React, Next, and Astro to build responsive, accessible, and performant web experiences."
-            icon={designIcon}
-            classes="w-full md:w-1/2"
-          />
-          <Card
-            header="Front-End Development"
-            text="I specialize in cutting-edge web development technologies including Javascript, Typescript, React, Next, and Astro to build responsive, accessible, and performant web experiences."
-            icon={designIcon}
-            classes="w-full md:w-1/2"
-          />
+      <div class="padding-extra">
+        <div>
+          <h2 class="text-center mb-1">Don't just take it from me.</h2>
+          <h4 class="text-center mb-10">
+            Here's what my clients have had to say.
+          </h4>
+          <div class="flex flex-col lg:flex-row justify-center gap-0 lg:gap-12">
+            <!-- <Carousel client:load /> -->
+            <Card
+              header="Front-End Development"
+              text="I specialize in cutting-edge web development technologies including Javascript, Typescript, React, Next, and Astro to build responsive, accessible, and performant web experiences."
+              icon={designIcon}
+              classes="w-full lg:w-1/2"
+            />
+            <Card
+              header="Front-End Development"
+              text="I specialize in cutting-edge web development technologies including Javascript, Typescript, React, Next, and Astro to build responsive, accessible, and performant web experiences."
+              icon={designIcon}
+              classes="w-full lg:w-1/2"
+            />
+          </div>
         </div>
       </div>
     </div>
