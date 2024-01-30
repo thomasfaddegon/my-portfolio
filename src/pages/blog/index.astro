@@ -16,9 +16,6 @@ const posts = (await getCollection("blog")).sort(
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
-      main {
-        width: 960px;
-      }
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -85,32 +82,48 @@ const posts = (await getCollection("blog")).sort(
       }
     </style>
   </head>
-  <body>
-    <Nav />
-    <main>
-      <section>
-        <ul>
-          {
-            posts.map((post) => (
-              <li>
-                <a href={`/blog/${post.slug}/`}>
-                  <img
-                    width={720}
-                    height={360}
-                    src={post.data.heroImage}
-                    alt=""
-                  />
-                  <h4 class="title">{post.data.title}</h4>
-                  <p class="date">
-                    <FormattedDate date={post.data.pubDate} />
-                  </p>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
+  <body class="h-full">
+    <main class="flex flex-col min-h-screen">
+      <!-- Hero Section -->
+      <div class="container container-large">
+        <div class="padding-global">
+          <!-- Nav -->
+          <Nav title={SITE_TITLE} />
+        </div>
+      </div>
+      <section class="flex-grow">
+        <div class="container container-large">
+          <div class="padding-global">
+            <ul
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full pt-16 pb-12"
+              id="header-content"
+            >
+              {
+                posts.map((post) => (
+                  <li class="col-span-1">
+                    <a href={`/blog/${post.slug}/`} class="block">
+                      <img
+                        width={720}
+                        height={360}
+                        src={post.data.heroImage}
+                        alt=""
+                        class="rounded-xl"
+                      />
+                      <h4 class="title">{post.data.title}</h4>
+                      <p class="date">
+                        <FormattedDate date={post.data.pubDate} />
+                      </p>
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
       </section>
+
+      <!-- Footer -->
+      <Footer />
     </main>
-    <Footer />
   </body>
 </html>

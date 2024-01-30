@@ -34,8 +34,7 @@ if (Astro.request.method === "POST") {
 
     // If there are no errors, process form submission
     if (!Object.values(formErrors).some(Boolean)) {
-      // Here you would handle the form submission, e.g., sending an email or storing the data
-      formData = {}; // Reset form data after successful handling
+      formData = {};
       return Astro.redirect("/thank-you");
     }
   } catch (error) {

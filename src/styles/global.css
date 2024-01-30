@@ -18,6 +18,11 @@
   background-color: black;
 }
 
+html,
+body {
+  min-height: 100%;
+}
+
 @font-face {
   font-family: "Manrope, sans-serif";
   src: url("/fonts/atkinson-bold.woff") format("woff");
