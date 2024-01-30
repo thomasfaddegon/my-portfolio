@@ -1,8 +1,8 @@
 ---
 const { centered, header, maxWidth } = Astro.props as {
   header: string;
-  centered: boolean;
-  maxWidth: string;
+  centered?: boolean;
+  maxWidth?: string;
 };
 
 const center = centered ? "text-center" : "";

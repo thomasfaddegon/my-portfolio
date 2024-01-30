@@ -8,15 +8,16 @@ import Icons from "./Icons.astro";
   <nav>
     <div class="container container-large">
       <div class="nav-content w-full flex justify-between items-center">
-        <a href="/"><Logo /></a>
+        <div><a href="/"><Logo /></a></div>
+
         <div
           class="bg-slate-900 px-8 rounded-full flex items-center gap-4 h-16 drop-shadow-[0px_0px_5px_rgba(255,255,255,0.75)]"
         >
           <div class="flex items-center gap-4 max-h-[10px]">
             <HeaderLink href="/">Home</HeaderLink>
-            <HeaderLink href="#portfolio">Portfolio</HeaderLink>
+            <HeaderLink href="/#portfolio">Portfolio</HeaderLink>
             <HeaderLink href="/blog">Blog</HeaderLink>
-            <HeaderLink href="/about">Contact</HeaderLink>
+            <HeaderLink href="/contact">Contact</HeaderLink>
           </div>
         </div>
         <Icons />

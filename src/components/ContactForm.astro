@@ -1,0 +1,110 @@
+---
+import Button from "./Button.astro";
+import H3 from "./H3.astro";
+
+function validateEmail(email: string) {
+  // Simple regex for basic email validation
+  const regex = /^\S+@\S+\.\S+$/;
+  return regex.test(email);
+}
+
+function validateNotEmpty(value: string | null): boolean {
+  return value !== null && value.trim().length > 0;
+}
+
+let formData = {};
+let formErrors = {
+  name: "",
+  email: "",
+  message: "",
+};
+
+// Check for POST method and process form data
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name = String(data.get("name") || "");
+    const email = String(data.get("email") || "");
+    const message = String(data.get("message") || "");
+
+    // Validate form data
+    formErrors.name = validateNotEmpty(name) ? "" : "First name is required";
+    formErrors.email = validateEmail(email) ? "" : "Email is invalid";
+    formErrors.message = validateNotEmpty(message) ? "" : "Message is required";
+
+    // If there are no errors, process form submission
+    if (!Object.values(formErrors).some(Boolean)) {
+      // Here you would handle the form submission, e.g., sending an email or storing the data
+      formData = {}; // Reset form data after successful handling
+      return Astro.redirect("/thank-you");
+    }
+  } catch (error) {
+    // Handle errors
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+
+<div class="mb-40">
+  <form method="POST" class="space-y-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label for="first_name" class="block text-sm font-medium text-gray-300"
+          ><H3 header="Name" /></label
+        >
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
+        />
+        {formErrors.name && <p class="text-red-500">{formErrors.name}</p>}
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-300"
+          ><H3 header="email" /></label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
+        />
+        {formErrors.email && <p class="text-red-500">{formErrors.email}</p>}
+      </div>
+    </div>
+    <div>
+      <label for="message" class="block text-sm font-medium text-gray-300"
+        ><H3 header="Message" /></label
+      >
+      <textarea
+        name="message"
+        id="message"
+        required
+        rows="8"
+        class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
+      ></textarea>
+      {formErrors.message && <p class="text-red-500">{formErrors.message}</p>}
+    </div>
+    <div>
+      <Button text="Get In Touch" type="tertiary" link="/contact" />
+    </div>
+  </form>
+</div>
+
+<style>
+  input,
+  textarea {
+    background-color: transparent;
+    border: white 1px solid;
+    border-radius: 0.4rem;
+    margin-bottom: 1.25rem;
+  }
+  label {
+    margin-bottom: 0.5rem;
+  }
+</style>

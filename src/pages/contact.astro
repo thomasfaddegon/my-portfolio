@@ -1,0 +1,67 @@
+---
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Button from "../components/Button.astro";
+import ContactForm from "../components/ContactForm.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <main>
+      <!-- Hero Section -->
+
+      <div class="container container-large">
+        <div class="padding-global">
+          <Nav title={SITE_TITLE} />
+        </div>
+      </div>
+      <section>
+        <div class="container container-large">
+          <div class="padding-global">
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full pt-16 pb-12"
+              id="header-content"
+            >
+              <div
+                class="col-span-1 lg:col-span-2 md:pr-12 flex flex-col gap-7"
+                id="header-text"
+              >
+                <h1>
+                  Hi! I'm Thomas. <br /> I bring websites & digital applications
+                  to life.
+                </h1>
+                <h4>Let's stay in touch.</h4>
+                <div class="max-w-lg">
+                  <p>
+                    Whether you're looking for a full-stack developer, a UX/UI
+                    specialist, or a product strategist, I'd love to hear from
+                    you.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-span-1 order-first md:order-last"
+                id="header-image"
+              >
+                <!-- <img
+                  src="https://placehold.co/400x450"
+                  alt="Thomas"
+                  class="rounded-xl"
+                /> -->
+              </div>
+            </div>
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  </body>
+</html>
