@@ -85,12 +85,10 @@ const posts = (await getCollection("blog")).sort(
   <body class="h-full">
     <main class="flex flex-col min-h-screen">
       <!-- Hero Section -->
-      <div class="container container-large">
-        <div class="padding-global">
-          <!-- Nav -->
-          <Nav title={SITE_TITLE} />
-        </div>
-      </div>
+
+      <!-- Nav -->
+      <Nav title={SITE_TITLE} />
+      <div class="h-24"></div>
       <section class="flex-grow">
         <div class="container container-large">
           <div class="padding-global">
@@ -120,6 +118,7 @@ const posts = (await getCollection("blog")).sort(
             </ul>
           </div>
         </div>
+        <div class="h-36"></div>
       </section>
 
       <!-- Footer -->
