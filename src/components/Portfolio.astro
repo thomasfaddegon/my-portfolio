@@ -12,12 +12,14 @@ const optimizedBackground = await getImage({
   style={`background-image: url('${optimizedBackground.src}'); background-size: cover; background-repeat: no-repeat;`}
   class="gradient-background min-h-96"
 > -->
+<div id="portfolio" class="relative top-[-60px] invisible"></div>
+
 <div
   style={`background-image: url('src/images/backgrounds/gradient-2000.png'); background-size: cover; background-repeat: no-repeat; background-position: bottom left;`}
   class="gradient-background min-h-96"
 >
   <div class="container container-large">
-    <div class="padding-global py-32" id="portfolio">
+    <div class="padding-global py-32">
       <h2 class="text-center mb-20">Recent Work</h2>
       <div class="flex flex-col gap-12">
         <Project
