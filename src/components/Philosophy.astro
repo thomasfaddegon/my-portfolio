@@ -6,17 +6,51 @@ import Button from "../components/Button.astro";
   <div class="bg-purple min-h-96">
     <div class="container container-large">
       <div class="padding-global">
-        <div class="grid grid-cols-5">
-          <div class="col-span-5 lg:col-span-2 bg-blue-300">col 1</div>
-          <div class="col-span-5 lg:col-span-3 bg-purple py-16 px-8">
+        <div class="grid grid-cols-5 gap-8 py-16">
+          <div
+            class="col-span-5 lg:col-span-2 bg-purple flex items-center md:px-8 lg:px-0"
+          >
+            <img src="src/images/graphics/graphic-1.webp" class="rounded-xl" />
+          </div>
+          <div class="col-span-5 lg:col-span-3 bg-purple py-6 md:px-8">
             <!-- content -->
             <div class="flex flex-col gap-4">
-              <h5>My Philosophy</h5>
+              <h5>My Philosophy & Process</h5>
               <h2>
                 Code makes things work, <br /> empathy makes them feel right
               </h2>
               <div class="mb-4">
                 <p>
+                  As a UX Engineer, my domain spans the realms of design,
+                  development, and product strategy. I specialize in steering
+                  new products from the initial concept stage through to
+                  completion, as well as refining existing products with
+                  data-driven insights. The experience of the user lies at the
+                  heart of all my recommendations, as <strong
+                    >the success of a product is often determined not by the
+                    code, but by how it makes its users feel.</strong
+                  >
+                </p>
+
+                <p>
+                  My process begins by using my UX design intuition to spot
+                  areas of friction, confusion, and overlooked opportunities.
+                  Following this, I delve into the data, analyzing metrics such
+                  as churn rates, funnel drop-offs, and conversion and bounce
+                  rates, to validate my initial observations and form new
+                  hypotheses. Armed with these insights, I personally implement
+                  the necessary changes to the front end, making sure that all
+                  KPIs are tracked properly for use in performance
+                  retrospectives and future optimizations.
+                </p>
+
+                <p>
+                  This holistic approach not only enhances the user experience
+                  but also drives tangible business results, ensuring that each
+                  product not only meets but exceeds both user expectations and
+                  company goals.
+                </p>
+                <!-- <p>
                   In the digital landscape, clean, scalable, and robust code is
                   the cornerstone for any successful product. But even though
                   code lays an essential foundation, <strong
@@ -33,7 +67,7 @@ import Button from "../components/Button.astro";
                   doesn't just meet technical benchmarks but also delivers an
                   experience intuitively aligned with user expectations and
                   aspirations.
-                </p>
+                </p> -->
 
                 <!-- <p>
                 In the digital landscape, clean, scalable, and robust code is
@@ -60,7 +94,7 @@ import Button from "../components/Button.astro";
                 aligned with user expectations and aspirations.
               </p> -->
               </div>
-              <div><Button text="Learn More" /></div>
+              <div><Button text="Get in Touch" link="/contact" /></div>
             </div>
           </div>
         </div>

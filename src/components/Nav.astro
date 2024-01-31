@@ -4,67 +4,139 @@ import Logo from "./Logo.astro";
 import Icons from "./Icons.astro";
 ---
 
-<header class="py-4 fixed top-0 w-full z-20 nav">
+<header class="fixed top-0 w-full nav z-50">
   <nav>
-    <div class="container container-large">
-      <div class="padding-global">
-        <div class="nav-content w-full flex justify-between items-center">
-          <div><a href="/"><Logo /></a></div>
-
+    <!-- Desktop & Tablet -->
+    <div class="hidden md:flex">
+      <div class="container container-large">
+        <div class="padding-global">
           <div
-            class="bg-slate-900 px-8 rounded-full flex items-center gap-4 h-16 drop-shadow-[0px_0px_5px_rgba(255,255,255,0.75)]"
+            class="nav-content w-full flex justify-between items-center py-1"
           >
-            <div class="flex items-center gap-4 max-h-[10px]">
-              <HeaderLink href="/">Home</HeaderLink>
-              <HeaderLink href="/#portfolio">Portfolio</HeaderLink>
-              <HeaderLink href="/blog">Blog</HeaderLink>
-              <HeaderLink href="/contact">Contact</HeaderLink>
+            <div><a href="/"><Logo /></a></div>
+
+            <div
+              class="bg-slate-900 px-8 rounded-full flex items-center gap-4 h-16 drop-shadow-[0px_0px_5px_rgba(255,255,255,0.75)]"
+            >
+              <div class="flex items-center gap-4 max-h-[10px]">
+                <HeaderLink href="/">Home</HeaderLink>
+                <HeaderLink href="/#portfolio">Portfolio</HeaderLink>
+                <HeaderLink href="/blog">Blog</HeaderLink>
+                <HeaderLink href="/contact">Contact</HeaderLink>
+              </div>
             </div>
+            <Icons />
           </div>
-          <Icons />
         </div>
       </div>
     </div>
+
+    <!-- Mobile -->
+    <div class="bg-black md:hidden border-b border-gray-200 py-2 z-50">
+      <div class="px-4 flex justify-between items-center">
+        <a href="/"><Logo /></a>
+        <!-- Mobile Hamburger Menu Button -->
+        <button id="hamburger-btn" class="text-white focus:outline-none">
+          <!-- Icon from Heroicons (https://heroicons.com/) -->
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobile-menu"
+      class="inset-0 bg-black bg-opacity-90 hidden z-1 h-screen"
+    >
+      <!-- Mobile Menu Content -->
+      <div class="text-white flex items-center justify-center h-full flex-col">
+        <HeaderLink href="/" class="block text-xl px-4 py-2">Home</HeaderLink>
+        <HeaderLink href="/#portfolio" class="block text-xl px-4 py-2">
+          Portfolio
+        </HeaderLink>
+        <HeaderLink href="/blog" class="block text-xl px-4 py-2">
+          Blog
+        </HeaderLink>
+        <HeaderLink href="/contact" class="block text-xl px-4 py-2">
+          Contact
+        </HeaderLink>
+        <div class="h-4"></div>
+        <Icons />
+      </div>
+    </div>
+    <div class="h-20 md:h-36"></div>
+
+    <style>
+      header {
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color 0.1s;
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+        box-shadow: 0 2px 8px rgba(var(--black), 5%);
+      }
+      h2 {
+        margin: 0;
+        font-size: 1em;
+      }
+
+      h2 a,
+      h2 a.active {
+        text-decoration: none;
+      }
+      nav a {
+        padding: 0.5em 1em;
+      }
+
+      @media (max-width: 768px) {
+        .social-links {
+          display: none;
+        }
+        nav a {
+          padding: 0.5em 0.5em;
+        }
+      }
+    </style>
+
+    <script>
+      const header = document.querySelector("header");
+
+      window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY;
+        const opacity = Math.min(scrollPosition / 250, 1);
+        if (header && window.innerWidth >= 768) {
+          // Check for md screen size and above
+          header.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+          header.style.borderColor = `rgba(255, 255, 255, ${opacity})`;
+        } else if (header) {
+          header.style.backgroundColor = ""; // Reset to default for smaller screens
+          header.style.borderColor = "";
+        }
+      });
+
+      const hamburgerBtn = document.getElementById("hamburger-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      if (mobileMenu) {
+        mobileMenu.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      }
+    </script>
   </nav>
 </header>
-<div class="h-24"></div>
-
-<style>
-  header {
-    background-color: rgba(0, 0, 0, 0); /* Initially transparent */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-    border-bottom: 1px solid rgba(255, 255, 255, 0); /* Transparent white border */
-    box-shadow: 0 2px 8px rgba(var(--black), 5%);
-  }
-  h2 {
-    margin: 0;
-    font-size: 1em;
-  }
-
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-  }
-  nav a {
-    padding: 0.5em 1em;
-  }
-
-  @media (max-width: 720px) {
-    .social-links {
-      display: none;
-    }
-  }
-</style>
-
-<script>
-  const header = document.querySelector("header");
-
-  window.addEventListener("scroll", () => {
-    const scrollPosition = window.scrollY;
-    const opacity = Math.min(scrollPosition / 250, 1);
-    if (header) {
-      header.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
-      header.style.borderColor = `rgba(255, 255, 255, ${opacity})`;
-    }
-  });
-</script>

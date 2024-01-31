@@ -4,19 +4,25 @@ import Icons from "./Icons.astro";
 const today = new Date();
 ---
 
-<footer>
-  <div class="bg-purple w-full h-full py-24 items-center flex flex-col">
-    <div class="flex flex-row gap-20 mb-8 font-bold text-lg">
-      <a href="/contact">Portfolio</a>
-      <a href="/contact">Blog</a>
-      <a href="/contact">Contact</a>
-    </div>
-    <div class="mb-4">
-      <p>&copy; {today.getFullYear()} Thomas Faddegon. All rights reserved.</p>
-    </div>
+<footer class="bg-purple text-center">
+  <div class="container container-large">
+    <div class="padding-global">
+      <div class="w-full h-full py-24 items-center flex flex-col">
+        <div class="flex flex-col md:flex-row gap-20 mb-8 font-bold text-lg">
+          <a href="/contact">Portfolio</a>
+          <a href="/contact">Blog</a>
+          <a href="/contact">Contact</a>
+        </div>
+        <div class="mb-4 p-2">
+          <p>
+            &copy; {today.getFullYear()} Thomas Faddegon. All rights reserved.
+          </p>
+        </div>
 
-    <div>
-      <Icons />
+        <div>
+          <Icons />
+        </div>
+      </div>
     </div>
   </div>
 </footer>

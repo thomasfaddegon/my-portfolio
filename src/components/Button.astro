@@ -1,12 +1,16 @@
 ---
-const { text, type = "primary" } = Astro.props as {
+const {
+  text,
+  type = "primary",
+  link,
+} = Astro.props as {
   text: string;
   link?: string;
   type?: ButtonType;
 };
 
 const globalClasses =
-  "button btn inline-flex items-center justify-center px-20  rounded-full text-lg";
+  "button btn inline-flex items-center justify-center px-6 md:px-20  rounded-full text-lg";
 
 type ButtonType = "primary" | "secondary" | "tertiary" | "link";
 
@@ -22,7 +26,7 @@ const buttonClasses = `button ${globalClasses} ${typeClasses[type]}`;
 ---
 
 <button class={buttonClasses} data-text={text}>
-  <span class="button-text font-medium">{text}</span>
+  <a href={link}> <span class="button-text font-medium">{text}</span></a>
 </button>
 
 <style>
