@@ -6,49 +6,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Button from "../components/Button.astro";
 import ContactForm from "../components/ContactForm.astro";
 import H3 from "../components//H3.astro";
-
-function validateEmail(email: string) {
-  // Simple regex for basic email validation
-  const regex = /^\S+@\S+\.\S+$/;
-  return regex.test(email);
-}
-
-function validateNotEmpty(value: string | null): boolean {
-  return value !== null && value.trim().length > 0;
-}
-
-let formData = {};
-let formErrors = {
-  name: "",
-  email: "",
-  message: "",
-};
-
-// Check for POST method and process form data
-if (Astro.request.method === "POST") {
-  try {
-    const data = await Astro.request.formData();
-    const name = String(data.get("name") || "");
-    const email = String(data.get("email") || "");
-    const message = String(data.get("message") || "");
-
-    // Validate form data
-    formErrors.name = validateNotEmpty(name) ? "" : "First name is required";
-    formErrors.email = validateEmail(email) ? "" : "Email is invalid";
-    formErrors.message = validateNotEmpty(message) ? "" : "Message is required";
-
-    // If there are no errors, process form submission
-    if (!Object.values(formErrors).some(Boolean)) {
-      formData = {};
-      return Astro.redirect("/thank-you");
-    }
-  } catch (error) {
-    // Handle errors
-    if (error instanceof Error) {
-      console.error(error.message);
-    }
-  }
-}
 ---
 
 <!doctype html>
@@ -100,7 +57,12 @@ if (Astro.request.method === "POST") {
               </div>
             </div>
             <div class="mb-40">
-              <form method="POST" class="space-y-4">
+              <form
+                name="contact-form"
+                method="POST"
+                data-netlify="true"
+                class="space-y-4"
+              >
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label
@@ -115,11 +77,6 @@ if (Astro.request.method === "POST") {
                       required
                       class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
                     />
-                    {
-                      formErrors.name && (
-                        <p class="text-red-500">{formErrors.name}</p>
-                      )
-                    }
                   </div>
                   <div>
                     <label
@@ -134,11 +91,6 @@ if (Astro.request.method === "POST") {
                       required
                       class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
                     />
-                    {
-                      formErrors.email && (
-                        <p class="text-red-500">{formErrors.email}</p>
-                      )
-                    }
                   </div>
                 </div>
                 <div>
@@ -154,14 +106,20 @@ if (Astro.request.method === "POST") {
                     rows="8"
                     class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
                   ></textarea>
-                  {
+                  <!-- {
                     formErrors.message && (
                       <p class="text-red-500">{formErrors.message}</p>
                     )
-                  }
+                  } -->
                 </div>
                 <div>
-                  <Button text="Get In Touch" type="primary" link="/contact" />
+                  <label for="bot-field" class="hidden"
+                    >Don’t fill this out if you're human:</label
+                  >
+                  <input name="bot-field" class="hidden" />
+                </div>
+                <div>
+                  <Button text="Get In Touch" type="primary" />
                 </div>
               </form>
             </div>
