@@ -13,8 +13,6 @@ export interface Props {
 const { header, text, classes, icon, rounded } = Astro.props as Props;
 
 const imageRounded = rounded ? "rounded-full" : "rounded-xl";
-
-console.log("image rounded: ", imageRounded);
 ---
 
 <!-- Card HTML structure -->
@@ -37,7 +35,7 @@ console.log("image rounded: ", imageRounded);
   }
   .card {
     position: relative;
-    background-image: url("src/images/backgrounds/gradient-1.png");
+    background-image: url("src/images/backgrounds/gradient.png");
     background-size: cover;
     background-position: bottom left;
     background-repeat: no-repeat;

@@ -4,27 +4,30 @@ import Logo from "./Logo.astro";
 import Icons from "./Icons.astro";
 ---
 
-<header class="py-8">
+<header class="py-2 fixed top-0 w-full z-20 nav">
   <nav>
     <div class="container container-large">
-      <div class="nav-content w-full flex justify-between items-center">
-        <div><a href="/"><Logo /></a></div>
+      <div class="padding-global">
+        <div class="nav-content w-full flex justify-between items-center">
+          <div><a href="/"><Logo /></a></div>
 
-        <div
-          class="bg-slate-900 px-8 rounded-full flex items-center gap-4 h-16 drop-shadow-[0px_0px_5px_rgba(255,255,255,0.75)]"
-        >
-          <div class="flex items-center gap-4 max-h-[10px]">
-            <HeaderLink href="/">Home</HeaderLink>
-            <HeaderLink href="/#portfolio">Portfolio</HeaderLink>
-            <HeaderLink href="/blog">Blog</HeaderLink>
-            <HeaderLink href="/contact">Contact</HeaderLink>
+          <div
+            class="bg-slate-900 px-8 rounded-full flex items-center gap-4 h-16 drop-shadow-[0px_0px_5px_rgba(255,255,255,0.75)]"
+          >
+            <div class="flex items-center gap-4 max-h-[10px]">
+              <HeaderLink href="/">Home</HeaderLink>
+              <HeaderLink href="/#portfolio">Portfolio</HeaderLink>
+              <HeaderLink href="/blog">Blog</HeaderLink>
+              <HeaderLink href="/contact">Contact</HeaderLink>
+            </div>
           </div>
+          <Icons />
         </div>
-        <Icons />
       </div>
     </div>
   </nav>
 </header>
+<div class="h-24"></div>
 
 <style>
   header {

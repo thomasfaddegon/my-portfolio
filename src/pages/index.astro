@@ -31,12 +31,8 @@ const optimizedBackground = await getImage({
         style={`background-image: url('${optimizedBackground.src}'); background-size: cover; background-repeat: no-repeat;`}
         class="gradient-background"
       >
-        <div class="container container-large">
-          <div class="padding-global">
-            <Nav title={SITE_TITLE} />
-            <Hero />
-          </div>
-        </div>
+        <Nav title={SITE_TITLE} />
+        <Hero />
       </div>
 
       <Skills />

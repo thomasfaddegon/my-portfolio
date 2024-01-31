@@ -1,39 +1,55 @@
 ---
 import Button from "./Button.astro";
+// import me from "../images/people/me.png";
+import me from "../images/people/me-3.png";
+import { Image } from "astro:assets";
 ---
 
-<div
-  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full pt-16 pb-28"
-  id="header-content"
->
-  <div
-    class="col-span-1 lg:col-span-2 md:pr-12 flex flex-col gap-5"
-    id="header-text"
-  >
-    <h1>
-      Hi! I'm Thomas. <br /> I bring websites & digital applications to life.
-    </h1>
-    <!-- <p>
-      With a holistic skillset of engineering, user behavior, and product
-      strategy, I turn thoughts into tangible realities.
-    </p> -->
-    <p>
-      With over a decade of experience in digital product development, I create
-      seamless experiences that empower users to achieve their goals without
-      friction, leading to higher customer satisfaction and increased sales.
-    </p>
-    <div class="flex flex-wrap gap-4">
-      <Button text="Get in Touch" type="primary" link="/" />
-      <Button text="See My Work" type="secondary" link="/" />
-    </div>
-    <div class="text-sm uppercase underline flex flex-wrap gap-5">
-      <h6>Full-Stack Development</h6>
-      <h6>UX/UI</h6>
-      <h6>Product Strategy</h6>
-      <h6>Data Analysis</h6>
+<section>
+  <div class="container container-large">
+    <div class="padding-global">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 w-full pt-16 pb-28"
+        id="header-content"
+      >
+        <div
+          class="col-span-1 lg:col-span-7 md:pr-12 flex flex-col gap-5 justify-center"
+          id="header-text"
+        >
+          <h1>
+            Hi! I'm Thomas. <br /> I bring websites & digital applications to life.
+          </h1>
+
+          <p>
+            With over a decade of experience in digital product design and
+            development, I create seamless experiences that empower users to
+            achieve their goals without friction, leading to higher customer
+            satisfaction and increased sales.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <Button text="Get in Touch" type="primary" link="/" />
+            <Button text="See My Work" type="secondary" link="/" />
+          </div>
+          <div class="text-sm uppercase underline flex flex-wrap gap-5">
+            <h6>Full-Stack Development</h6>
+            <h6>UX/UI</h6>
+            <h6>Product Strategy</h6>
+            <h6>Data Analysis</h6>
+          </div>
+        </div>
+        <div
+          class="col-span-1 lg:col-span-5 order-first md:order-last"
+          id="header-image"
+        >
+          <Image
+            src={me}
+            alt="Thomas"
+            width="400"
+            height="400"
+            class="rounded-xl w-full"
+          />
+        </div>
+      </div>
     </div>
   </div>
-  <div class="col-span-1 order-first md:order-last" id="header-image">
-    <img src="https://placehold.co/400x450" alt="Thomas" class="rounded-xl" />
-  </div>
-</div>
+</section>
