@@ -4,7 +4,7 @@ import Logo from "./Logo.astro";
 import Icons from "./Icons.astro";
 ---
 
-<header class="py-2 fixed top-0 w-full z-20 nav">
+<header class="py-4 fixed top-0 w-full z-20 nav">
   <nav>
     <div class="container container-large">
       <div class="padding-global">
@@ -31,6 +31,9 @@ import Icons from "./Icons.astro";
 
 <style>
   header {
+    background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    border-bottom: 1px solid rgba(255, 255, 255, 0); /* Transparent white border */
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
   h2 {
@@ -52,3 +55,16 @@ import Icons from "./Icons.astro";
     }
   }
 </style>
+
+<script>
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const opacity = Math.min(scrollPosition / 250, 1);
+    if (header) {
+      header.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+      header.style.borderColor = `rgba(255, 255, 255, ${opacity})`;
+    }
+  });
+</script>
