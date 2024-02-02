@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = "Thomas Faddegon";
 export const SITE_DESCRIPTION =
-  "Welcome to my portfolio website! I am full-stack web developer and product strategist with a passion for creating beautiful, responsive, and accessible websites.";
+  "Welcome to my portfolio! I am UX Engineer and product strategist with a passion for creating high-performing websites and digital applications.";
