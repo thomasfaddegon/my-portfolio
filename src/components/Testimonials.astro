@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Carousel from "./Carousel.jsx";
 import Card from "./Card.astro";
-import georgiaPettit from "../images/people/georgia-pettit.png";
+import caroline from "../images/people/caroline.jpeg";
+import georgia from "../images/people/georgia-pettit.png";
 import Button from "./Button.astro";
 ---
 
@@ -21,16 +22,20 @@ import Button from "./Button.astro";
           >
             <!-- <Carousel client:load /> -->
             <Card
-              header="Georgia Pettit, CEO @ Luminary"
+              header="Georgia Pettit"
+              title="Co-Founder @ The Luminary Agency"
               text="Tom's data-driven approach to website optimization was a game-changer for our online business. His ability to translate analytics into actionable insights led to a remarkable increase in our conversion rates. His expertise in user engagement strategies has been invaluable to our team."
-              icon={georgiaPettit}
+              icon={georgia}
+              link="https://www.linkedin.com/in/georgiapettit/"
               classes="w-full lg:w-1/2"
               rounded={true}
             />
             <Card
-              header="John Smith, CEO @ Fake Company"
-              text="Tom's data-driven approach to website optimization was a game-changer for our online business. His ability to translate analytics into actionable insights led to a remarkable increase in our conversion rates. His expertise in user engagement strategies has been invaluable to our team."
-              icon={georgiaPettit}
+              header="Caroline Adams Vulcano"
+              title="Founder @ Caroline Parker Creative"
+              text="Tom is a person you want on your team. Dependable, efficient, and extremely talented, Tom is a rare breed that can dig in deep into a project and then present it beautifully. He has an eye for beautiful interfaces, the knowledge to back up his choices, and the skill to craft high-end products."
+              icon={caroline}
+              link="https://www.linkedin.com/in/carolinepadams/"
               classes="w-full lg:w-1/2"
               rounded={true}
             />

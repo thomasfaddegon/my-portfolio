@@ -3,6 +3,7 @@ import { getImage } from "astro:assets";
 import gradientBackground from "../images/backgrounds/gradient-2000.png";
 import Project from "./Project.astro";
 import planetFacts from "../images/projects/planet-facts.png";
+
 const optimizedBackground = await getImage({
   src: gradientBackground,
 });
@@ -15,7 +16,7 @@ const optimizedBackground = await getImage({
 <div id="portfolio" class="relative top-[-60px] invisible"></div>
 
 <div
-  style={`background-image: url('src/images/backgrounds/gradient-2000.png'); background-size: cover; background-repeat: no-repeat; background-position: bottom left;`}
+  style={`background-image: url('${optimizedBackground.src}'); background-size: cover; background-repeat: no-repeat; background-position: bottom left;`}
   class="gradient-background min-h-96"
 >
   <div class="container container-large">

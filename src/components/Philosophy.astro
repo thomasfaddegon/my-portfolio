@@ -1,5 +1,7 @@
 ---
 import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import graphic from "../images/graphics/graphic-1.webp";
 ---
 
 <section class="">
@@ -10,7 +12,13 @@ import Button from "../components/Button.astro";
           <div
             class="col-span-5 lg:col-span-2 bg-purple flex items-center md:px-8 lg:px-0"
           >
-            <img src="src/images/graphics/graphic-1.webp" class="rounded-xl" />
+            <Image
+              src={graphic}
+              class="rounded-xl"
+              height="500"
+              width="500"
+              alt="ux dev engineering graphic"
+            />
           </div>
           <div class="col-span-5 lg:col-span-3 bg-purple py-6 md:px-8">
             <!-- content -->
@@ -50,6 +58,9 @@ import Button from "../components/Button.astro";
                   every product surpasses both customer expectations and
                   organizational objectives.
                 </p>
+                <div class="mt-8">
+                  <Button href="/contact" type="primary" text="Get in Touch" />
+                </div>
               </div>
             </div>
           </div>

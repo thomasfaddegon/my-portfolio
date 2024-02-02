@@ -63,11 +63,14 @@ import H3 from "../components//H3.astro";
               >
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label
-                      for="first_name"
-                      class="block text-sm font-medium text-gray-300"
-                      ><H3 header="Name" /></label
-                    >
+                    <div class="flex flex-start">
+                      <label
+                        for="first_name"
+                        class="block text-sm font-medium text-gray-300"
+                        ><H3 header="Name" /></label
+                      >
+                    </div>
+
                     <input
                       type="text"
                       name="name"
@@ -77,11 +80,13 @@ import H3 from "../components//H3.astro";
                     />
                   </div>
                   <div>
-                    <label
-                      for="email"
-                      class="block text-sm font-medium text-gray-300"
-                      ><H3 header="email" /></label
-                    >
+                    <div class="flex flex-start">
+                      <label
+                        for="email"
+                        class="block text-sm font-medium text-gray-300"
+                        ><H3 header="email" /></label
+                      >
+                    </div>
                     <input
                       type="email"
                       name="email"
@@ -92,11 +97,12 @@ import H3 from "../components//H3.astro";
                   </div>
                 </div>
                 <div>
-                  <label
-                    for="message"
-                    class="block text-sm font-medium text-gray-300"
-                    ><H3 header="Message" /></label
-                  >
+                  <div class="flex flex-start">
+                    <label
+                      for="message"
+                      class="block text-sm font-medium text-gray-300"
+                      ><H3 header="Message" /></label>
+                  </div>
                   <textarea
                     name="message"
                     id="message"
