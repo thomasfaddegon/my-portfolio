@@ -1,16 +1,16 @@
 import { renderers } from './renderers.mjs';
-import { manifest } from './manifest__L4OEMt5.mjs';
+import { manifest } from './manifest_Zrhj7Z8L.mjs';
 import * as serverEntrypointModule from '@astrojs/netlify/ssr-function.js';
 import { onRequest } from './_noop-middleware.mjs';
 
 const _page0 = () => import('./chunks/generic_P6CH66Kv.mjs');
-const _page1 = () => import('./chunks/about_kkHT656j.mjs');
-const _page2 = () => import('./chunks/index_B8z9PEj8.mjs');
-const _page3 = () => import('./chunks/_.._KNi5uI-O.mjs');
-const _page4 = () => import('./chunks/index_LX5JKPrw.mjs');
-const _page5 = () => import('./chunks/contact_iHZQRaRP.mjs');
-const _page6 = () => import('./chunks/rss_sl1mXpgi.mjs');
-const _page7 = () => import('./chunks/thank-you_f8YCzOzO.mjs');
+const _page1 = () => import('./chunks/about_NziKyPZi.mjs');
+const _page2 = () => import('./chunks/index_-5Vd3lrv.mjs');
+const _page3 = () => import('./chunks/_.._JhXkIYz9.mjs');
+const _page4 = () => import('./chunks/index_EB_ILpwB.mjs');
+const _page5 = () => import('./chunks/contact_5ew4yOFD.mjs');
+const _page6 = () => import('./chunks/rss_RZRj-brP.mjs');
+const _page7 = () => import('./chunks/thank-you_utzskPQN.mjs');
 const pageMap = new Map([
     ["node_modules/astro/dist/assets/endpoint/generic.js", _page0],
     ["src/pages/about.astro", _page1],
