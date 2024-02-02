@@ -9,7 +9,7 @@ const { centered, header, maxWidth, classes, hideBracketOnMobile } =
   };
 
 const center = centered ? "text-center" : "";
-const hideBracket = hideBracketOnMobile ? "hidden sm:flex" : "";
+const hideBracket = hideBracketOnMobile ? "hidden xl:flex" : "";
 ---
 
 <!-- <div class="flex flex-row">
@@ -25,7 +25,7 @@ const hideBracket = hideBracketOnMobile ? "hidden sm:flex" : "";
 </div> -->
 <div class="flex items-center justify-center gap-2">
   <span class={`text-purple text-2xl mb-[2px] ${hideBracket}`}>&lt;</span>
-  <h3 class={`text-lg sm:whitespace-nowrap overflow-hidden ${center}`}>
+  <h3 class={`text-lg xl:whitespace-nowrap overflow-hidden ${center}`}>
     {header}
   </h3>
   <span class={`text-purple text-2xl mb-[2px] ${hideBracket}`}>&gt;</span>
