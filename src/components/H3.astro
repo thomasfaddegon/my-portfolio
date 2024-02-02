@@ -1,12 +1,15 @@
 ---
-const { centered, header, maxWidth, classes } = Astro.props as {
-  header: string;
-  centered?: boolean;
-  maxWidth?: string;
-  classes?: string;
-};
+const { centered, header, maxWidth, classes, hideBracketOnMobile } =
+  Astro.props as {
+    header: string;
+    centered?: boolean;
+    maxWidth?: string;
+    classes?: string;
+    hideBracketOnMobile?: boolean;
+  };
 
 const center = centered ? "text-center" : "";
+const hideBracket = hideBracketOnMobile ? "hidden sm:flex" : "";
 ---
 
 <!-- <div class="flex flex-row">
@@ -21,9 +24,11 @@ const center = centered ? "text-center" : "";
   </div>
 </div> -->
 <div class="flex items-center justify-center gap-2">
-  <span class="text-purple text-2xl mb-[2px]">&lt;</span>
-  <h3 class="text-lg whitespace-nowrap overflow-hidden">{header}</h3>
-  <span class="text-purple text-2xl mb-[2px]">&gt;</span>
+  <span class={`text-purple text-2xl mb-[2px] ${hideBracket}`}>&lt;</span>
+  <h3 class={`text-lg sm:whitespace-nowrap overflow-hidden ${center}`}>
+    {header}
+  </h3>
+  <span class={`text-purple text-2xl mb-[2px] ${hideBracket}`}>&gt;</span>
 </div>
 
 <style>
