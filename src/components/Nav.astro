@@ -7,22 +7,22 @@ import Icons from "./Icons.astro";
 <header class="fixed top-0 w-full nav z-50">
   <nav>
     <!-- Desktop & Tablet -->
-    <div class="hidden md:flex">
+    <div class="hidden md:flex pt-[0.8rem] pb-[0.85rem]">
       <div class="container container-large">
         <div class="padding-global">
-          <div
-            class="nav-content w-full flex justify-between items-center py-1"
-          >
+          <div class="nav-content w-full flex justify-between items-center">
             <div><a href="/"><Logo /></a></div>
 
             <div
-              class="bg-slate-900 px-8 rounded-full flex items-center gap-4 h-16 drop-shadow-[0px_0px_5px_rgba(255,255,255,0.75)]"
+              class="bg-slate-900 px-8 rounded-full flex items-center gap-4 h-14 drop-shadow-[0px_0px_5px_rgba(255,255,255,0.75)]"
             >
-              <div class="flex items-center gap-4 max-h-[10px]">
-                <HeaderLink href="/">Home</HeaderLink>
-                <HeaderLink href="/#portfolio">Portfolio</HeaderLink>
+              <div class="flex items-center gap-6">
+                <HeaderLink href="/" text="Home">Home</HeaderLink>
+                <HeaderLink href="/#portfolio" text="Portfolio">
+                  Portfolio
+                </HeaderLink>
                 <!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
-                <HeaderLink href="/contact">Contact</HeaderLink>
+                <HeaderLink href="/contact" text="Contact">Contact</HeaderLink>
               </div>
             </div>
             <Icons />
@@ -63,17 +63,19 @@ import Icons from "./Icons.astro";
       <div
         class="text-white flex items-center justify-center h-full flex-col gap-4"
       >
-        <HeaderLink href="/" class="block text-xl px-4 py-2">Home</HeaderLink>
-        <HeaderLink href="/#portfolio" class="block text-xl px-4 py-2">
-          Portfolio
-        </HeaderLink>
-        <HeaderLink href="/blog" class="block text-xl px-4 py-2">
-          Blog
-        </HeaderLink>
-        <HeaderLink href="/contact" class="block text-xl px-4 py-2">
-          Contact
-        </HeaderLink>
-        <div class="h-2"></div>
+        <HeaderLink href="/" classNames="block text-xl px-4 py-2" text="Home" />
+
+        <HeaderLink
+          href="/#portfolio"
+          classNames="block text-xl px-4 py-2 bg-blue-700"
+          text="Portfolio"
+        />
+        <HeaderLink
+          href="/contact"
+          classNames="block text-xl px-4 py-2"
+          text="Contact"
+        />
+
         <Icons />
       </div>
     </div>
@@ -94,20 +96,9 @@ import Icons from "./Icons.astro";
     font-size: 1em;
   }
 
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-  }
-  nav a {
-    padding: 0.5em 1em;
-  }
-
   @media (max-width: 768px) {
     .social-links {
       display: none;
-    }
-    nav a {
-      padding: 0.5em 0.5em;
     }
   }
 </style>

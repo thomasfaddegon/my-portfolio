@@ -1,22 +1,21 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-
-type Props = HTMLAttributes<"a">;
-
-const { href, class: className, ...props } = Astro.props;
+const { href, text, classNames } = Astro.props as {
+  href: string;
+  text: string;
+  classNames: string;
+};
 
 const { pathname } = Astro.url;
 const isActive = href === pathname || href === pathname.replace(/\/$/, "");
 ---
 
-<div class="rounded-xl flex items-center justify-center">
+<div class="rounded-xl flex items-center justify-center h-8">
   <a
     href={href}
-    class:list={[className, { active: isActive }]}
-    {...props}
-    class="rounded-2xl flex items-center justify-center"
+    class:list={[{ active: isActive }]}
+    class=`rounded-full flex items-center justify-center py-1 px-3 ${classNames}`
   >
-    <slot />
+    {text}
   </a>
 </div>
 
