@@ -28,10 +28,7 @@ const optimizedBackground = await getImage({
   <body>
     <main class="min-h-screen">
       <!-- Hero Section -->
-      <div
-        style={`background-image: url('${optimizedBackground.src}'); background-size: cover; background-repeat: no-repeat;`}
-        class="gradient-background"
-      >
+      <div class="gradient-background">
         <Nav title={SITE_TITLE} />
         <Hero />
       </div>

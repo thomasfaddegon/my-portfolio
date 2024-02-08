@@ -7,6 +7,7 @@ export default {
         purple: "#4B4BFA",
         white: "#FFFFFF",
         black: "#000000",
+        darkBlue: "#121275",
       },
     },
   },

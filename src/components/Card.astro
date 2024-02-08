@@ -26,9 +26,12 @@ const imageRounded = rounded ? "rounded-full" : "rounded-xl";
 }`>
   <a href={link}>
     <div class="py-6">
-      <div
+      <!-- <div
         style={`background-image: url('${optimizedBackground.src}'); background-size: cover; background-repeat: no-repeat; background-position: bottom left;`}
         class="card px-4 py-5 pb-8 flex flex-col items-center w-full h-full"
+      > -->
+      <div
+        class="card px-4 py-5 pb-8 flex flex-col items-center w-full h-full border-2 bg-slate-900 drop-shadow-[0px_0px_5px_rgba(255,255,255,0.75)]"
       >
         <div
           class=`max-w-36 flex items-center w-full mb-4 ${imageRounded} overflow-hidden`
