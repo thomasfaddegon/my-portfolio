@@ -90,8 +90,12 @@ import Icons from "./Icons.astro";
 
 <style>
   header {
+    top: 20px;
     background-color: rgba(0, 0, 0, 0);
-    transition: background-color 0.1s;
+    transition:
+      top 0.6s,
+      background-color 0.5s,
+      border-color 0.5s;
     border-bottom: 1px solid rgba(255, 255, 255, 0);
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
@@ -110,16 +114,30 @@ import Icons from "./Icons.astro";
 <script>
   const header = document.querySelector("header");
 
+  if (!header) {
+    throw new Error("No header found");
+  }
+
   window.addEventListener("scroll", () => {
-    const scrollPosition = window.scrollY;
-    const opacity = Math.min(scrollPosition / 250, 1);
-    if (header && window.innerWidth >= 768) {
-      // Check for md screen size and above
-      header.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
-      header.style.borderColor = `rgba(255, 255, 255, ${opacity})`;
-    } else if (header) {
-      header.style.backgroundColor = ""; // Reset to default for smaller screens
+    const hasScrolled = window.scrollY > 0; // Check if the user has scrolled down
+
+    if (window.innerWidth >= 768) {
+      if (hasScrolled) {
+        // User has scrolled - start transitions
+        header.style.top = "0"; // Move the navbar up
+        header.style.backgroundColor = `rgba(0, 0, 0, 1)`; // Make background fully opaque
+        header.style.borderColor = `rgba(255, 255, 255, 1)`; // Adjust border color if needed
+      } else {
+        // User is at the top of the page - reset styles
+        header.style.top = "20px"; // Original position
+        header.style.backgroundColor = `rgba(0, 0, 0, 0)`; // Fully transparent background
+        header.style.borderColor = `rgba(255, 255, 255, 0)`; // Transparent border
+      }
+    } else {
+      // For smaller screens, you might want to keep or adjust these settings
+      header.style.backgroundColor = ""; // Optionally reset for smaller screens
       header.style.borderColor = "";
+      header.style.top = "";
     }
   });
 
