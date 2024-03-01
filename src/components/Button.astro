@@ -16,9 +16,9 @@ type ButtonType = "primary" | "secondary" | "tertiary" | "link";
 
 const typeClasses: Record<ButtonType, string> = {
   primary:
-    "primary-button border border-white transparent-text transparent-text",
-  secondary: "border border-white",
-  tertiary: "bg-purple",
+    "button-primary border border-white transparent-text transparent-text",
+  secondary: "button-secondary border border-white",
+  tertiary: "button-tertiary bg-purple",
   link: "bg-transparent border-transparent",
 };
 
@@ -26,7 +26,7 @@ const buttonClasses = `button ${globalClasses} ${typeClasses[type]}`;
 ---
 
 <button class={buttonClasses} data-text={text}>
-  <a href={link}> <span class="button-text font-medium">{text}</span></a>
+  <a href={link}> <span class="button-text">{text}</span></a>
 </button>
 
 <style>
@@ -34,15 +34,25 @@ const buttonClasses = `button ${globalClasses} ${typeClasses[type]}`;
     line-height: inherit;
     padding-top: 0.75em;
     padding-bottom: 0.7em;
+    /* border: 0.5px solid white; */
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, 0.5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition:
+      all 1250ms cubic-bezier(0.19, 1, 0.22, 1),
+      color 100ms cubic-bezier(0.19, 1, 0.22, 1);
+    font-weight: 500;
   }
 
-  .primary-button {
+  .button-primary {
     position: relative;
     color: black;
     mix-blend-mode: screen;
   }
 
-  .primary-button::before {
+  .button-primary::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -57,8 +67,30 @@ const buttonClasses = `button ${globalClasses} ${typeClasses[type]}`;
 
   .button-text {
     display: block;
-
     transform: translateY(-1.5px);
+  }
+
+  .button:hover {
+    box-shadow:
+      inset 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    /* text-shadow: 1px 1px 2px #427388; */
+  }
+
+  .button-primary:hover {
+    /* background-color: rgb(111, 200, 229); */
+    background-color: rgb(137, 170, 255);
+    color: white;
+  }
+
+  .button-secondary:hover {
+    background-color: rgb(137, 170, 255);
+  }
+
+  .button-tertiary:hover {
+    background-color: rgb(190, 183, 254);
   }
 
   /* .primary-button:hover .button-text {
