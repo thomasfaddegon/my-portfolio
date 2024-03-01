@@ -124,6 +124,7 @@ h6 {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-size: 0.85rem;
+
   text-transform: uppercase;
   /* text-decoration: underline; */
   letter-spacing: 1px;

@@ -10,7 +10,7 @@ const {
 };
 
 const globalClasses =
-  "button btn inline-flex items-center justify-center px-12 md:px-20  rounded-full text-lg";
+  "button btn inline-flex items-center justify-center px-12 md:px-20  rounded-full text-lg ";
 
 type ButtonType = "primary" | "secondary" | "tertiary" | "link";
 
@@ -55,11 +55,11 @@ const buttonClasses = `button ${globalClasses} ${typeClasses[type]}`;
     pointer-events: none;
   }
 
-  /* .button-text {
-    line-height: 20px;
+  .button-text {
     display: block;
-    transition: transform 0.3s ease;
-  } */
+
+    transform: translateY(-1.5px);
+  }
 
   /* .primary-button:hover .button-text {
     transform: scale(1.2);

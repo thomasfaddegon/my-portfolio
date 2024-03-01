@@ -22,10 +22,22 @@ const optimizedBackground = await getImage({
       <div class="flex flex-col gap-12">
         <Project
           image="../images/projects/planet-facts.png"
-          tags={["Front-End Development", "UX Design", "Product Strategy"]}
-          header="Project Title"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam faucibus, augue nisl ultricies augue, nec ultricies nisl elit nec nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam faucibus, augue nisl ultricies augue, nec ultricies nisl elit nec nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam faucibus, augue nisl ultricies augue, nec ultricies nisl elit nec nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          tags={[
+            "Front-End Development",
+            "D3",
+            "React",
+            "Python",
+            "Web Scraping",
+            "Data Visualization",
+            "Data Analysis",
+          ]}
+          header="Beat Trends"
+          text="Beat Trends is an interactive graphing app that visualizes the popularity of different genres of dance music over time. I created this graph app by first crafting a custom web scraper with Python and Selenium which I used to capture all the tracks from the Beatport Top 100 on the first of each month for a decade in a CSV format. After collecting the data, I used Pandas to clean it up and organize it into JSONs organized by year. For the final touch, I combined React and the powerful graph library D3.js to design the UI and visualize the data, making the app both informative and interactive."
           link="/"
+          links={{
+            "View Code": "https://beat-trends.netlify.app/",
+            "View Code1": "https://beat-trends.netlify.app/",
+          }}
         />
         <Project
           image="../images/projects/planet-facts.png"
@@ -33,6 +45,9 @@ const optimizedBackground = await getImage({
           header="Project Title"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam faucibus, augue nisl ultricies augue, nec ultricies nisl elit nec nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam faucibus, augue nisl ultricies augue, nec ultricies nisl elit nec nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam faucibus, augue nisl ultricies augue, nec ultricies nisl elit nec nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
           link="/"
+          links={{
+            "View Code": "https://beat-trends.netlify.app/",
+          }}
         />
         <Project
           image="../images/projects/planet-facts.png"
