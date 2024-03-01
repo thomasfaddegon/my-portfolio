@@ -3,10 +3,12 @@ const {
   text,
   type = "primary",
   link,
+  target,
 } = Astro.props as {
   text: string;
   link?: string;
   type?: ButtonType;
+  target?: string;
 };
 
 const globalClasses =
@@ -25,9 +27,13 @@ const typeClasses: Record<ButtonType, string> = {
 const buttonClasses = `button ${globalClasses} ${typeClasses[type]}`;
 ---
 
-<button class={buttonClasses} data-text={text}>
-  <a href={link}> <span class="button-text">{text}</span></a>
-</button>
+<div>
+  <a href={link} class="w-full h-full" target={target}>
+    <button class={buttonClasses} data-text={text}>
+      <span class="button-text">{text}</span>
+    </button>
+  </a>
+</div>
 
 <style>
   .button {
@@ -80,13 +86,12 @@ const buttonClasses = `button ${globalClasses} ${typeClasses[type]}`;
   }
 
   .button-primary:hover {
-    /* background-color: rgb(111, 200, 229); */
     background-color: rgb(137, 170, 255);
     color: white;
   }
 
   .button-secondary:hover {
-    background-color: rgb(137, 170, 255);
+    background-color: rgb(190, 183, 254);
   }
 
   .button-tertiary:hover {

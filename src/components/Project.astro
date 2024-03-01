@@ -1,11 +1,10 @@
 ---
-import { Image } from "astro:assets";
 import Button from "./Button.astro";
-import projectImage from "../images/projects/planet-facts.png";
+import { Image } from "astro:assets";
 
 export interface Props {
   header: string;
-  image: string;
+  image: any;
   tags: string[];
   text: string;
   link: string;
@@ -13,25 +12,14 @@ export interface Props {
 }
 
 const { header, image, tags, text, link, links } = Astro.props as Props;
-
-// let linkStyles;
-// if (Object.keys(links).length > 1) {
-//   linkstyles = "grid-cols-1";
-// }
 ---
 
 <div class="bg-black rounded-xl p-10">
   <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
     <div class="lg:col-span-5 drop-shadow-[0px_0px_5px_rgba(255,255,255,0.75)]">
       <a href={link}>
-        <Image
-          src={projectImage}
-          alt=""
-          class="rounded-lg"
-          width="600"
-          height="450"
-        /></a
-      >
+        <Image src={image} alt="" class="rounded-lg" width="600" height="450" />
+      </a>
     </div>
     <div class="lg:col-span-7 flex flex-col gap-4">
       <h3 class="font-bold">{header}</h3>
@@ -52,7 +40,12 @@ const { header, image, tags, text, link, links } = Astro.props as Props;
       <p class="">{text}</p>
       <div class="flex flex-col sm:flex-row gap-4">
         <div>
-          <Button text="See Project" type="tertiary" />
+          <Button
+            text="See Project"
+            type="tertiary"
+            target="_blank"
+            link={link}
+          />
         </div>
 
         {
@@ -63,7 +56,7 @@ const { header, image, tags, text, link, links } = Astro.props as Props;
               {Object.entries(links).map(([text, link]) => {
                 return (
                   <div class="">
-                    <a class="secondary-link" href={`${link}`}>
+                    <a class="secondary-link" href={`${link}`} target="_blank">
                       {text} &nbsp; &rarr;
                     </a>
                   </div>
