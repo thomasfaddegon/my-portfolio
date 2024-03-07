@@ -4,10 +4,19 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
+import { Image } from "astro:assets";
+import me from "../images/people/me-3.png";
 
-type Props = CollectionEntry<"blog">["data"];
+interface BlogProps {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  heroImage?: string;
+}
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage } =
+  Astro.props as BlogProps;
 ---
 
 <html lang="en">
@@ -51,14 +60,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       .last-updated-on {
         font-style: italic;
       }
+      a:hover {
+        color:;
+      }
     </style>
   </head>
 
   <body>
     <Header />
     <main>
-      <article>
-        <div class="hero-image">
+      <article class="pb-12">
+        <div class="hero-image pt-8">
           {
             heroImage && (
               <img width={1020} height={510} src={heroImage} alt="" />
@@ -68,6 +80,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         <div class="prose">
           <div class="title">
             <div class="date">
+              <span class="text-purple hover:text-lightBlue"
+                ><a href="/">Thomas Faddegon</a></span
+              > &nbsp;|&nbsp;
               <FormattedDate date={pubDate} />
               {
                 updatedDate && (
@@ -81,9 +96,36 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             <hr />
           </div>
           <slot />
+          <div class="border-t-2 border-white mt-12 mb-10"></div>
+          <div class="flex flex-row gap-4">
+            <div class="min-w-16">
+              <a href="/">
+                <Image
+                  src={me}
+                  alt="Author"
+                  width={100}
+                  height={100}
+                  class="rounded-[100%]"
+                /></a
+              >
+            </div>
+            <div class="flex flex-col gap-2">
+              <a href="/"
+                ><h4 class="text-purple hover:text-lightBlue mb-1">
+                  Thomas Faddegon
+                </h4></a
+              >
+              <p>
+                Thomas is a User-Experience (UX) Engineer (half front-end
+                developer, half UX designer) with a passion for clean code,
+                great user experiences, and using data to tell impactful
+                stories.
+              </p>
+            </div>
+          </div>
         </div>
       </article>
+      <Footer />
     </main>
-    <Footer />
   </body>
 </html>

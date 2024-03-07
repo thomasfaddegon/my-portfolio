@@ -4,7 +4,7 @@ import Logo from "./Logo.astro";
 import Icons from "./Icons.astro";
 ---
 
-<header class="w-full nav z-50">
+<header class="w-full nav z-50 bg-transparent">
   <nav>
     <!-- Desktop & Tablet -->
     <div class="hidden md:flex py-5">
@@ -19,10 +19,8 @@ import Icons from "./Icons.astro";
               >
                 <div class="flex items-center gap-6">
                   <HeaderLink href="/" text="Home" />
-                  <!-- <HeaderLink href="/#portfolio" text="Portfolio" /> -->
+                  <HeaderLink href="/blog" text="Blog" />
                   <HeaderLink href="/resume" text="Resume" />
-
-                  <!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
                   <HeaderLink href="/contact" text="Contact" />
                 </div>
               </div>
@@ -89,12 +87,10 @@ import Icons from "./Icons.astro";
 
 <style>
   header {
-    background-color: rgba(0, 0, 0, 0);
     transition:
       top 0.6s,
       background-color 0.5s,
       border-color 0.5s;
-    box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
   h2 {
     margin: 0;

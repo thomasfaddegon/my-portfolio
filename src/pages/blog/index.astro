@@ -5,9 +5,10 @@ import Nav from "../../components/Nav.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
+import type { BlogProps, PostProps } from "../../../types";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+  (a: any, b: any) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
 );
 ---
 
@@ -50,7 +51,6 @@ const posts = (await getCollection("blog")).sort(
         display: block;
       }
       .title {
-        margin: 0;
         color: rgb(var(--black));
         line-height: 1;
       }
@@ -92,30 +92,32 @@ const posts = (await getCollection("blog")).sort(
       <section class="flex-grow">
         <div class="container container-large">
           <div class="padding-global">
-            <ul
-              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full pt-16 pb-12"
-              id="header-content"
-            >
-              {
-                posts.map((post) => (
-                  <li class="col-span-1">
-                    <a href={`/blog/${post.slug}/`} class="block">
-                      <img
-                        width={720}
-                        height={360}
-                        src={post.data.heroImage}
-                        alt=""
-                        class="rounded-xl"
-                      />
-                      <h4 class="title">{post.data.title}</h4>
-                      <p class="date">
-                        <FormattedDate date={post.data.pubDate} />
-                      </p>
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
+            <div class="padding-extra">
+              <ul
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full pt-16 pb-12"
+                id="header-content"
+              >
+                {
+                  posts.map((post: any) => (
+                    <li class="col-span-1">
+                      <a href={`/blog/${post.slug}/`} class="block">
+                        <img
+                          width={720}
+                          height={360}
+                          src={post.data.heroImage}
+                          alt=""
+                          class="rounded-xl pb-2"
+                        />
+                        <h4 class="title mb-2">{post.data.title}</h4>
+                        <p class="date">
+                          <FormattedDate date={post.data.pubDate} />
+                        </p>
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
           </div>
         </div>
         <div class="h-36"></div>

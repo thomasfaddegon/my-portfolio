@@ -5,6 +5,8 @@ pubDate: "Jan 04 2024"
 heroImage: "/src/images/blogs/infuriating-design-flaw-strategy-games/header-modern-strategy-games-ui.jpg"
 ---
 
+import BlogWidget from "../../components/BlogWidget.astro";
+
 <div class="blog-post">
 
 Apps and websites are the first thing most people think of when they hear UX/UI, but I'd argue that designing the interface for an advanced strategy game presents one of the most complex UI challenges out there.
@@ -15,7 +17,9 @@ Take a look at this screenshot from _Age of Wonders 4_.
 
 ![age of wonders 4 interface](../../images/blogs/infuriating-design-flaw-strategy-games/age-of-wonders-4.png)
 
-<div class="caption"><em>Age of Wonders 4</em>  </div>
+<div class="caption">
+  <em>Age of Wonders 4</em>{" "}
+</div>
 
 This interface contains over 50 pieces of information, and yet it feels extremely approachable and user-friendly thanks to its masterful implementation of hierarchy, contrast, color, and balance. Related metrics and actions are grouped together, and the most important pieces of information are given the most visual weight.
 
@@ -27,7 +31,10 @@ One of the most significant UI advancements in modern strategy games is the expe
 
 ![Rome 2 tooltip](../../images/blogs/infuriating-design-flaw-strategy-games/age-of-wonders-4-tooltip.png)
 
-<div class="caption"><em>Age of Wonders 4</em> uses nested tooltips, where hovering over a unit in triggers a tooltip, which you can hover to trigger another tooltip, etc. </div>
+<div class="caption">
+  <em>Age of Wonders 4</em> uses nested tooltips, where hovering over a unit in
+  triggers a tooltip, which you can hover to trigger another tooltip, etc.{" "}
+</div>
 
 Want to learn more about a particular unit? Hover over it. Ok, it says it the unit has the trait “Fortified”, but what does that mean? Hover over the word Fortified, which is handily underlined to demonstrate it can be hovered. Ok, Fortified increases a unit’s defense. How does a unit’s defense work? Hover over “Defense” and… you get the idea.
 
@@ -35,9 +42,13 @@ However, when I tried to hover over building options in _Total War: Rome 2_, I s
 
 ![age of wonders 4 tooltip](../../images/blogs/infuriating-design-flaw-strategy-games/rome-2.png)
 
-<div class="caption">Annoying tooltip placement in <em>Total War: Rome 2</em> </div>
+<div class="caption">
+  Annoying tooltip placement in <em>Total War: Rome 2</em>{" "}
+</div>
 
 This UI design flaw blatantly violates one of the core principles of UI design: proximity. The principle requires that related elements are placed together to streamline user interaction and comprehension. Instead, this design choice forces users to repeatedly scan back and forth across the screen, significantly hampering the user experience and making information harder to consume.
+
+<BlogWidget />
 
 ## _Songs of Silence_
 
@@ -47,25 +58,33 @@ During the game's combat phase, units will automatically engage in typical auto-
 
 ![songs of silence tooltip](../../images/blogs/infuriating-design-flaw-strategy-games/songs-of-silence.jpg)
 
-<div class="caption"><em>Songs of Silence</em> is beautiful, but the placement of tooltips is hideous.</div>
+<div class="caption">
+  <em>Songs of Silence</em> is beautiful, but the placement of tooltips is
+  hideous.
+</div>
 
-Every time I wanted to understand the cards in my hand, I would have hover over the card, move my eyes to the top of the screen, move by eyes back down to the screen so I could hover over the next card, etc. All the while I’m missing the visually impressive battle unfolding before me (and likely missing the opportune window to cast my abilities).
+Every time I wanted to understand the cards in my hand, I would have to hover over the card, move my eyes to the top of the screen to read the description, then move by eyes back down to the screen so I could hover over the next card, etc. All the while I’m missing the visually impressive battle unfolding before me (and likely missing the opportune window to cast my abilities).
 
 ## _Darkest Dungeon 2_
 
-The issue reached a peak of frustration when trying another new, equally visually impressive game, _Darkest Dungeon 2_. When trying to understand my character’s abilities, my eyes once again had to perform some uncomfortable ocular gymnastics.
+My frustration started to boil over just a few days later when trying another new, equally visually impressive game, _Darkest Dungeon 2_. During combat, my eyes once again had to perform some uncomfortable ocular gymnastics to understand my character's abilities.
 
-In an exact replica of _Rome 2’s_ UI, highlighting an ability will display a tooltip in the bottom right of the screen. Even playing on the compact screen of a Steam Deck, this design choice was jarring and made it take significantly longer for me to understand my available actions.
+In an almost exact replica of _Rome 2’s_ UI, highlighting an ability will display a tooltip in the bottom right of the screen. Even playing on the compact screen of a Steam Deck, this design choice was jarring and made it take significantly longer for me to understand my available actions.
 
 ![songs of silence tooltip](../../images/blogs/infuriating-design-flaw-strategy-games/darkest-dungeon-2.jpg)
 
-<div class="caption"><em>Darkest Dungeon 2</em></div>
+<div class="caption">
+  <em>Darkest Dungeon 2</em>
+</div>
 
 This was particularly baffling given that the original _Darkest Dungeon_ had already solved this problem by displaying tooltips directly adjacent to the hovered item.
 
 ![songs of silence tooltip](../../images/blogs/infuriating-design-flaw-strategy-games/darkest-dungeon.jpg)
 
-<div class="caption">The original <em>Darkest Dungeon</em> had a far superior UI.</div>
+<div class="caption">
+  The original <em>Darkest Dungeon</em> had a far superior UI and tooltip
+  system.
+</div>
 
 This is a massive downgrade, and overall, I found the interfaces of the sequel to be significantly harder to navigate than the original for a myriad of reasons.
 
