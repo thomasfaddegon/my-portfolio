@@ -6,8 +6,11 @@ export default {
       colors: {
         purple: "#4B4BFA",
         white: "#FFFFFF",
-        black: "#000000",
+        black: "#141416",
+        lightGrey: "#d9d7d7",
+        lightBlue: "#89aaff",
         darkBlue: "#121275",
+        lavendar: "#beb7fe",
       },
     },
   },

@@ -1,0 +1,54 @@
+---
+const { position, company, date, link } = Astro.props as {
+  position: string;
+  company: string;
+  date: string;
+  link: string;
+};
+---
+
+<div class="mb-6">
+  <div
+    class="flex flex-col lg:flex-row lg:justify-between lg:items-center w-full mb-1"
+  >
+    <div class="flex flex-col lg:flex-row lg:items-center">
+      <h3 class="text-md">{position}</h3>
+      <span class="hidden lg:flex">&nbsp; - &nbsp;</span>
+      <a href={link}
+        ><span class="text-lg text-lightBlue hover:text-lavendar"
+          >{company}</span
+        ></a
+      >
+    </div>
+    <div class="justify-end italic text-[17px]">{date}</div>
+  </div>
+
+  <div class="pl-4">
+    <ul class="resume-list">
+      <slot />
+    </ul>
+  </div>
+</div>
+
+<style>
+  ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 0;
+  }
+  li {
+    text-indent: -20px;
+    padding-left: 20px;
+  }
+  * {
+    letter-spacing: 0.5px;
+  }
+  a:hover {
+    text-decoration: underline;
+    text-decoration-color: #beb7fe;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>

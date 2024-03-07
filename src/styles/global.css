@@ -1,13 +1,7 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500;600&display=swap");
 
 * {
@@ -45,7 +39,7 @@ body {
 
 main {
   margin: auto;
-  background-color: black;
+  background-color: #141416;
 }
 
 .padding-global {
@@ -87,13 +81,14 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   line-height: 3rem;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 1024px) {
   h2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     line-height: 2.25rem;
   }
 }
@@ -101,9 +96,10 @@ h2 {
 h3 {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.12rem;
   line-height: 1.75rem;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 h4 {
@@ -118,12 +114,14 @@ h5 {
   font-size: 1.2rem;
   line-height: 1.5rem;
   text-transform: uppercase;
+  color: rgb(217, 215, 215);
 }
 
 h6 {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-size: 0.85rem;
+  color: rgb(217, 215, 215);
 
   text-transform: uppercase;
   /* text-decoration: underline; */
@@ -132,6 +130,9 @@ h6 {
 
 p {
   font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 300;
   margin-bottom: 1rem;
 }
 
@@ -174,6 +175,15 @@ span {
   animation: gradient 25s ease infinite;
 }
 
+.gradient-background-2 {
+  /* background: linear-gradient(-45deg, #121275 20%, #5b5bfa, #732669); */
+  /* background: linear-gradient(-45deg, #732669 10%, #121275 15%, #5b5bfa 95%); */
+  /* background: linear-gradient(-45deg, #5b5bfa, #732669 50%, #121275 75%); */
+  background: linear-gradient(155deg, #4b4bfa 20%, #732669 70%, #121275 80%);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -184,4 +194,43 @@ span {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* BLOG STYLES */
+
+.blog-post h1 {
+  font-weight: 800; /* Make it bold */
+}
+
+.blog-post h2,
+.blog-post h3,
+.blog-post h4,
+.blog-post h5,
+.blog-post h6 {
+  font-weight: 500; /* Less bold than h1 */
+}
+
+.blog-post img {
+  margin-top: 2.5rem;
+}
+
+.caption {
+  font-size: 0.875rem /* 14px */;
+  line-height: 1.25rem /* 20px */;
+  text-align: center;
+  width: 100%;
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+  color: grey;
+}
+
+.blog-post p {
+  margin-bottom: 1rem;
+}
+
+.blog-post h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-family: "IBM Plex Mono", monospace;
 }

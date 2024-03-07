@@ -22,113 +22,115 @@ import H3 from "../components//H3.astro";
       <section class="flex-grow">
         <div class="container container-large">
           <div class="padding-global">
-            <div
-              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full pt-16 pb-12"
-              id="header-content"
-            >
+            <div class="padding-extra">
               <div
-                class="col-span-1 lg:col-span-2 md:pr-12 flex flex-col gap-7"
-                id="header-text"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full pt-16 pb-6"
+                id="header-content"
               >
-                <h1>
-                  Hi! I'm Thomas. <br /> I bring websites & digital applications
-                  to life.
-                </h1>
-                <h4>Let's stay in touch.</h4>
-                <div class="max-w-lg">
-                  <p>
-                    Whether you're looking for a front-end developer, a UX/UI
-                    specialist, a product strategist, or all of the above, I'd
-                    love to hear from you.
-                  </p>
+                <div
+                  class="col-span-1 md:col-span-2 md:pr-12 flex flex-col gap-7"
+                  id="header-text"
+                >
+                  <h1>
+                    Hi! I'm Thomas. <br /> I bring websites & digital applications
+                    to life.
+                  </h1>
+                  <h4>Let's stay in touch.</h4>
+                  <div class="max-w-lg">
+                    <p>
+                      Whether you're looking for a front-end developer, a UX/UI
+                      specialist, a product strategist, or all of the above, I'd
+                      love to hear from you.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="col-span-1 order-first md:order-last"
-                id="header-image"
-              >
-                <!-- <img
+                <div
+                  class="col-span-1 order-first md:order-last"
+                  id="header-image"
+                >
+                  <!-- <img
                   src="https://placehold.co/400x450"
                   alt="Thomas"
                   class="rounded-xl"
                 /> -->
-              </div>
-            </div>
-            <div class="mb-40">
-              <form
-                name="contact-form"
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                class="space-y-4"
-                action="/thank-you"
-              >
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <div class="flex flex-start">
-                      <label
-                        for="first_name"
-                        class="block text-sm font-medium text-gray-300"
-                        ><H3 header="Name" /></label
-                      >
-                    </div>
-
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      required
-                      class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
-                    />
-                  </div>
-                  <div>
-                    <div class="flex flex-start">
-                      <label
-                        for="email"
-                        class="block text-sm font-medium text-gray-300"
-                        ><H3 header="email" /></label
-                      >
-                    </div>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      required
-                      class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
-                    />
-                  </div>
                 </div>
-                <div>
-                  <div class="flex flex-start">
-                    <label
-                      for="message"
-                      class="block text-sm font-medium text-gray-300"
-                      ><H3 header="Message" /></label
-                    >
+              </div>
+              <div class="mb-40">
+                <form
+                  name="contact-form"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  class="space-y-4"
+                  action="/thank-you"
+                >
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <div class="flex flex-start">
+                        <label
+                          for="first_name"
+                          class="block text-sm font-medium text-gray-300"
+                          ><H3 header="Name" /></label
+                        >
+                      </div>
+
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        required
+                        class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
+                      />
+                    </div>
+                    <div>
+                      <div class="flex flex-start">
+                        <label
+                          for="email"
+                          class="block text-sm font-medium text-gray-300"
+                          ><H3 header="email" /></label
+                        >
+                      </div>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                        class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
+                      />
+                    </div>
                   </div>
-                  <textarea
-                    name="message"
-                    id="message"
-                    required
-                    rows="8"
-                    class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
-                  ></textarea>
-                  <!-- {
+                  <div>
+                    <div class="flex flex-start">
+                      <label
+                        for="message"
+                        class="block text-sm font-medium text-gray-300"
+                        ><H3 header="Message" /></label
+                      >
+                    </div>
+                    <textarea
+                      name="message"
+                      id="message"
+                      required
+                      rows="8"
+                      class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
+                    ></textarea>
+                    <!-- {
                     formErrors.message && (
                       <p class="text-red-500">{formErrors.message}</p>
                     )
                   } -->
-                </div>
-                <div>
-                  <label for="bot-field" class="hidden"
-                    >Don’t fill this out if you're human:</label
-                  >
-                  <input name="bot-field" class="hidden" />
-                </div>
-                <div>
-                  <Button text="Send Message" type="primary" />
-                </div>
-              </form>
+                  </div>
+                  <div>
+                    <label for="bot-field" class="hidden"
+                      >Don’t fill this out if you're human:</label
+                    >
+                    <input name="bot-field" class="hidden" />
+                  </div>
+                  <div>
+                    <Button text="Send Message" type="primary" />
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>

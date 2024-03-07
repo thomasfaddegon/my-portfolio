@@ -11,28 +11,33 @@ import newPaltzIcon from "../images/icons/new-paltz-icon.png";
 
 <section>
   <div class="container container-large">
-    <div class="padding-global py-32">
+    <div class="padding-global pt-24 md:pt-32 pb-16 md:pb-24">
       <!-- Work Experience -->
       <div>
         <h2 class="mb-12 padding-extra">Work Experience</h2>
-        <div class="flex flex-col lg:flex-row gap-24 mb-16 padding-extra">
+        <div
+          class="flex flex-col lg:flex-row gap-10 md:gap-24 mb-16 padding-extra"
+        >
           <Position
-            title="Front-End Developer & UX/UI Specialist"
+            title="UX Engineer"
             location="The Luminary Agency"
+            link="https://theluminaryagency.com/"
             years="2021 - Present (Part Time)"
             description="Developed responsive web interfaces using WordPress, Webflow, Squarespace, and HTML/CSS/JavaScript. Created UI wireframe designs with Figma, Relume, and Balsamiq, improving user experience and navigability. Collaborated on brand aesthetics with the design team, ensuring cohesive visual strategies across platforms. Achievements include 1,000% traffic increase, 150% higher conversion rates, and 15% lower bounce rates."
           />
           <Position
             title="Front-End Developer & Product Strategist"
             location="Higher Self Yoga"
+            link="https://higherselfyoga.org"
             years="2020 - Present (Part Time)"
             description="Designed and implemented a product and marketing strategy that grew user traffic from 1,000 to 25,000 monthly and expanded our email list from 2,000 to 16,000. Led a team in migrating from WordPress to Webflow to enhance design and functionality, which increased site speed by 50%, reduced bounce rates by 5%, and increased conversions by 25%. Developed a new community platform with optimized user flow and onboarding, integrating features like personalized dashboards, a tagged forum, and real-time messaging."
           />
         </div>
-        <div class="track py-16">
-          <div class="flex flex-col lg:flex-row gap-24 padding-extra">
+        <div class="track sm:py-16">
+          <div class="flex flex-col lg:flex-row gap-10 md:gap-24 padding-extra">
             <Position
               title="Director of Digital Marketing"
+              link="https://www.cruiseline.com/"
               location="Cruiseline.com"
               years="2018 - 2020"
               description="Led a team in a comprehensive marketing and sales campaign, leveraging display, PPC, email, and SEO, increasing conversions by 30%. Proposed UX/UI enhancements using A/B testing, user recordings, and heatmaps to boost conversions. Guided engineering in aligning product prototypes with optimal UX design principles and business objectives. Conducted in-depth market and sales trend analysis over six years, positioning the company as an industry leader."
@@ -40,6 +45,7 @@ import newPaltzIcon from "../images/icons/new-paltz-icon.png";
             <Position
               title="Inbound Marketing & Content Strategy"
               location="Cruiseline.com"
+              link="https://www.cruiseline.com/"
               years="2015 - 2018"
               description="Crafted a robust content and email strategy, enhancing site and email presence through rebranding, SEO, and compelling editorial pieces which lead to a 900% increase in site traffic. Managed weekly analytics, leveraging insights to optimize content and marketing strategies. Collaborated with engineers to create a display ad network, generating upwards of $200k annually. Performed usability testing on new products, writing detailed feedback and bug reports for the dev team to optimize new features before launch."
             />
@@ -50,7 +56,9 @@ import newPaltzIcon from "../images/icons/new-paltz-icon.png";
       <div class="padding-extra">
         <h2 class="mt-24 mb-16">Certifications & Education</h2>
         <div>
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-10"
+          >
             <Certification
               title="Software Engineer"
               text="1,000+ hours of coding experience in new and legacy full-stack technologies, computer science foundations, and agile methodologies."
@@ -75,7 +83,7 @@ import newPaltzIcon from "../images/icons/new-paltz-icon.png";
         </div>
       </div>
       <div
-        class="flex items-center justify-center mt-8 mb-8 gap-4 flex-col md:flex-row"
+        class="flex padding-extra md:justify-center mt-8 mb-8 gap-4 flex-col sm:flex-row"
       >
         <Button
           text="LinkedIn"
@@ -84,9 +92,9 @@ import newPaltzIcon from "../images/icons/new-paltz-icon.png";
           target="_blank"
         />
         <Button
-          text="My Resume"
+          text="Full Resume"
           type="secondary"
-          link="/Thomas Faddegon - Resume 2024.pdf"
+          link="/resume"
           target="_blank"
         />
       </div>
@@ -108,5 +116,9 @@ import newPaltzIcon from "../images/icons/new-paltz-icon.png";
     .track {
       border: none;
     }
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 </style>

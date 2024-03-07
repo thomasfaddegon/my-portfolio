@@ -7,15 +7,15 @@ const today = new Date();
 <footer class="bg-purple text-center">
   <div class="container container-large">
     <div class="padding-global">
-      <div class="w-full h-full py-24 items-center flex flex-col">
+      <div class="w-full h-full py-24 items-center flex flex-col gap-2">
         <div
-          class="flex flex-col md:flex-row gap-4 md:gap-20 mb-8 font-bold text-lg"
+          class="flex flex-col md:flex-row gap-4 md:gap-20 mb-2 font-bold text-lg"
         >
           <a href="/contact">Portfolio</a>
           <a href="/contact">Blog</a>
           <a href="/contact">Contact</a>
         </div>
-        <div class="mb-4 p-2">
+        <div class="p-2">
           <p>
             &copy; {today.getFullYear()} Thomas Faddegon. All rights reserved.
           </p>
@@ -41,5 +41,10 @@ const today = new Date();
   }
   .social-links a:hover {
     color: rgb(var(--gray-dark));
+  }
+  a:hover {
+    color: #d8d8d8;
+    cursor: pointer;
+    text-decoration: underline;
   }
 </style>

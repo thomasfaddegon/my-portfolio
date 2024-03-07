@@ -17,64 +17,65 @@ const optimizedBackground = await getImage({
 > -->
 <div id="portfolio" class="relative top-[-60px] invisible"></div>
 
-<div class="gradient-background min-h-96">
+<div class="gradient-background-2 min-h-96">
   <div class="container container-large">
     <div class="padding-global py-32">
-      <h2 class="text-center mb-20">Recent Projects</h2>
-      <div class="flex flex-col gap-12">
-        <Project
-          image={beatTrends}
-          tags={[
-            "Front-End Development",
-            "D3",
-            "React",
-            "Python",
-            "Pandas",
-            "Web Scraping",
-            "Data Visualization",
-            "Data Analysis",
-          ]}
-          header="Beat Trends"
-          text="Beat Trends is an interactive graphing app that visualizes the popularity of different genres of dance music over time. I created this graph app by first crafting a custom web scraper with Python and Selenium which I used to capture all the tracks from the Beatport Top 100 on the first of each month for a decade in a CSV format. After collecting the data, I used Pandas to clean it up and organize it into JSONs organized by year. For the final touch, I combined React and the powerful graph library D3.js to design the UI and visualize the data, making the app both informative and interactive."
-          link="https://beat-trends.netlify.app/"
-          links={{
-            "View Code": "https://github.com/thomasfaddegon/beat-trends",
-          }}
-        />
-        <Project
-          image={planetFacts}
-          tags={[
-            "Front-End Development",
-            "React",
-            "Typescript",
-            "Tailwind",
-            "Zustand",
-            "Figma",
-          ]}
-          header="Tom's Planet Facts"
-          text="Embark on a cosmic journey with this dynamic Single Page Application (SPA) that guides you through the wonders of the solar system! I developed this project using Vite, Typescript, React, Tailwind CSS, and Figma designs sourced from FrontEndMentor.com. To ensure seamless navigation and a crisp UX, I integrated Zustand (a lightweight but powerful global state management library) along with custom animations for the planets and stars to bring the app to life."
-          link="https://tomsplanetfacts.netlify.app/"
-          links={{
-            "View Code": "https://github.com/thomasfaddegon/planet-facts",
-          }}
-        />
-        <Project
-          image={myPortfolio}
-          tags={[
-            "Front-End Development",
-            "Astro",
-            "React",
-            "Typescript",
-            "Tailwind",
-          ]}
-          header="My Portfolio (This Site)"
-          text="Since my portfolio is mostly a static site, Astro felt like the perfect choice due to its lightning fast loading times. For the components where I did need to add interactivity or dynamic data, I was easily able to incorporate React. I also used Tailwind for styling and Typescript for type safety."
-          link="https://shattereddisk.github.io/rickroll/rickroll.mp4"
-          links={{
-            "View Code": "https://github.com/thomasfaddegon/my-portfolio",
-          }}
-        />
-        <!-- <Project
+      <div class="padding-extra">
+        <h2 class="mb-20 text-center text-5xl">Recent Projects</h2>
+        <div class="flex flex-col gap-12">
+          <Project
+            image={beatTrends}
+            tags={[
+              "Front-End Development",
+              "D3",
+              "React",
+              "Python",
+              "Pandas",
+              "Web Scraping",
+              "Data Visualization",
+              "Data Analysis",
+            ]}
+            header="Beat Trends"
+            text="Beat Trends is an interactive graphing app that visualizes the popularity of different genres of dance music over time. I created this graph app by first crafting a custom web scraper with Python and Selenium which I used to capture all the tracks from the Beatport Top 100 on the first of each month for a decade in a CSV format. After collecting the data, I used Pandas to clean it up and organize it into JSONs organized by year. For the final touch, I combined React and the powerful graph library D3.js to design the UI and visualize the data, making the app both informative and interactive."
+            link="https://beat-trends.netlify.app/"
+            links={{
+              "View Code": "https://github.com/thomasfaddegon/beat-trends",
+            }}
+          />
+          <Project
+            image={planetFacts}
+            tags={[
+              "Front-End Development",
+              "React",
+              "Typescript",
+              "Tailwind",
+              "Zustand",
+              "Figma",
+            ]}
+            header="Tom's Planet Facts"
+            text="Embark on a cosmic journey with this dynamic Single Page Application (SPA) that guides you through the wonders of the solar system! I developed this project using Vite, Typescript, React, Tailwind CSS, and Figma designs sourced from FrontEndMentor.com. To ensure seamless navigation and a crisp UX, I integrated Zustand (a lightweight but powerful global state management library) along with custom animations for the planets and stars to bring the app to life."
+            link="https://tomsplanetfacts.netlify.app/"
+            links={{
+              "View Code": "https://github.com/thomasfaddegon/planet-facts",
+            }}
+          />
+          <Project
+            image={myPortfolio}
+            tags={[
+              "Front-End Development",
+              "Astro",
+              "React",
+              "Typescript",
+              "Tailwind",
+            ]}
+            header="My Portfolio (This Site)"
+            text="Since my portfolio is mostly a static site, Astro felt like the perfect choice due to its lightning fast loading times. For the components where I did need to add interactivity or dynamic data, I was easily able to incorporate React. I also used Tailwind for styling and Typescript for type safety."
+            link="https://shattereddisk.github.io/rickroll/rickroll.mp4"
+            links={{
+              "View Code": "https://github.com/thomasfaddegon/my-portfolio",
+            }}
+          />
+          <!-- <Project
           image={beatTrends}
           header="Project Title"
           tags={[
@@ -87,6 +88,7 @@ const optimizedBackground = await getImage({
           text="Since my portfolio is mostly a static site, I decided to use Astro to build it. For the components where I did need to add interactivity or dynamic data, I used React. I also used Tailwind for styling and Typescript for type safety. I'm really happy with the result and I think Astro is a great tool for building static sites."
           link="/"
         /> -->
+        </div>
       </div>
     </div>
   </div>
