@@ -20,13 +20,11 @@ const { title, location, years, description, link } = Astro.props as Props;
         classes="text-lg font-bold"
         hideBracketOnMobile={true}
       /> -->
-      <h3>{title}</h3>
+      <h3 class="text-lightBlue">{title}</h3>
     </div>
     <div class="mb-[1px]">
       <a href={link}>
-        <span class="font-bold underline text-lightBlue hover:text-lavendar"
-          >{location}</span
-        ></a
+        <span class="underline hover:text-lavendar">{location}</span></a
       >
     </div>
   </div>
