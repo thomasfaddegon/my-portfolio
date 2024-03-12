@@ -24,7 +24,7 @@ const { title, location, years, description, link } = Astro.props as Props;
     </div>
     <div class="mb-[1px]">
       <a href={link}>
-        <span class="font-bold text-lightBlue hover:text-lavendar"
+        <span class="font-bold underline text-lightBlue hover:text-lavendar"
           >{location}</span
         ></a
       >
@@ -34,10 +34,3 @@ const { title, location, years, description, link } = Astro.props as Props;
   <div class="mb-3"><span class="text-[15px] italic">{years}</span></div>
   <div><span><p>{description}</p></span></div>
 </div>
-
-<style>
-  a:hover {
-    text-decoration: underline;
-    text-decoration-color: rgb(190 183 254);
-  }
-</style>
