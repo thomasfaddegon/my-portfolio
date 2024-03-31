@@ -17,7 +17,7 @@ import Icons from "./Icons.astro";
               <div
                 class="bg-slate-900 px-8 rounded-full flex items-center gap-4 h-14 drop-shadow-[0px_0px_2px_rgba(255,255,255,0.75)]"
               >
-                <div class="flex items-center gap-6">
+                <div class="flex items-center gap-4 lg:gap-6">
                   <HeaderLink href="/" text="Home" />
                   <HeaderLink href="/blog" text="Blog" />
                   <HeaderLink href="/resume" text="Resume" />
@@ -33,7 +33,7 @@ import Icons from "./Icons.astro";
 
     <!-- Mobile -->
     <div class="bg-black md:hidden border-b border-gray-200 py-2 z-50">
-      <div class="px-6 sm:px-8 flex justify-between items-center">
+      <div class="px-6 sm:px-8 flex justify-between">
         <a href="/"><Logo /></a>
         <!-- Mobile Hamburger Menu Button -->
         <button id="hamburger-btn" class="text-white focus:outline-none">
@@ -57,12 +57,10 @@ import Icons from "./Icons.astro";
     <!-- Mobile Menu Overlay -->
     <div
       id="mobile-menu"
-      class="inset-0 bg-black bg-opacity-90 hidden z-1 h-screen"
+      class="inset-0 bg-black pt-8 bg-opacity-90 hidden z-1 h-screen text-xl"
     >
       <!-- Mobile Menu Content -->
-      <div
-        class="text-white flex items-center justify-center h-full flex-col gap-4"
-      >
+      <div class="text-white flex items-center h-full flex-col gap-8">
         <HeaderLink href="/" classNames="block text-xl px-4 py-2" text="Home" />
 
         <!-- <HeaderLink
@@ -70,13 +68,14 @@ import Icons from "./Icons.astro";
           classNames="block text-xl px-4 py-2 bg-blue-700"
           text="Portfolio"
         /> -->
+        <HeaderLink href="/resume" text="Resume" />
+        <HeaderLink href="/blog" text="Blog" />
         <HeaderLink
           href="/contact"
-          classNames="block text-xl px-4 py-2"
+          classNames="block text-xl px-4 py-2 1"
           text="Contact"
         />
 
-        <HeaderLink href="/resume" text="Resume" />
         <Icons />
       </div>
     </div>
