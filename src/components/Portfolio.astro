@@ -5,6 +5,9 @@ import Project from "./Project.astro";
 import planetFacts from "../images/projects/planet-facts.png";
 import beatTrends from "../images/projects/beat-trends.png";
 import myPortfolio from "../images/projects/my-portfolio.png";
+import nflScorePredictor from "../images/projects/nfl-score-predictor.png";
+import girlCamper from "../images/projects/girl-camper.png";
+import higherSelfYoga from "../images/projects/higher-self-yoga.png";
 
 const optimizedBackground = await getImage({
   src: gradientBackground,
@@ -48,16 +51,56 @@ const optimizedBackground = await getImage({
               "Front-End Development",
               "React",
               "Typescript",
-              "Tailwind",
+              "Tailwind CSS",
               "Zustand",
               "Figma",
             ]}
             header="Tom's Planet Facts"
-            text="Embark on a cosmic journey with this dynamic Single Page Application (SPA) that guides you through the wonders of the solar system! I developed this project using Vite, Typescript, React, Tailwind CSS, and Figma designs sourced from FrontEndMentor.com. To ensure seamless navigation and a crisp UX, I integrated Zustand (a lightweight but powerful global state management library) along with custom animations for the planets and stars to bring the app to life."
+            text="This dynamic single-page application (SPA) that guides users through the wonders of the solar system. I developed this project using Vite, Typescript, React, Tailwind CSS, and Figma designs sourced from FrontEndMentor.com. To ensure seamless navigation and a crisp UX, I integrated Zustand (a lightweight but powerful global state management library) along with custom animations for the planets and stars to bring the app to life."
             link="https://tomsplanetfacts.netlify.app/"
             links={{
               "View Code": "https://github.com/thomasfaddegon/planet-facts",
             }}
+          />
+          <Project
+            image={girlCamper}
+            tags={[
+              "UX/UI",
+              "Google Analytics",
+              "Crazy Egg",
+              "Data Analysis",
+              "UX Optimization",
+            ]}
+            header="Girl Camper UX & Analytics Audit"
+            text="I was hired by Girl Camper, a popular camping and RVing site for women with over a million followers, to conduct a UX and analytics audit of their website. I utilized Google Analytics and Crazy Egg to track user behavior and analyze the data, identifying areas for improvement and optimization. After compiling my findings, I made several recommendations including an overhaul of the hero section based on UX best practices, a reordering of the homepage sections according to user behavior analytics, and revisions to the user onboarding flow designed to reduce friction and increase sign-ups. My insights are currently being used to guide an overhaul of the site. New metrics will be available soon!"
+            link="https://docs.google.com/presentation/d/1IMINEAH_ypOf5mbiwSHVLK8URMz2iOPMjdIQyKBcBQ0/edit?usp=sharing"
+          />
+          <Project
+            image={nflScorePredictor}
+            tags={[
+              "Python",
+              "Machine Learning",
+              "Sci-Kit Learn",
+              "Pandas",
+              "Flask",
+              "Web Scraping",
+              "React/Vite",
+              "Heroku",
+            ]}
+            header="NFL Score Predictor"
+            text="This app integrates Python-driven machine learning with a JavaScript frontend, enabling users to predict the outcome of games between NFL teams from the last 20 years. I harvested historical NFL data through web scraping, producing CSVs that I then cleaned and refined using pandas. This data fueled the training of over a hundred machine learning models, leveraging regularization, feature engineering, and hyperparameter optimization. After assessing these models for accuracy, I used the most effective one to forecast the 2023 NFL playoffs, where it predicted 70% of games correctly. The app utilizes a Flask API to serve static React frontend files and fetch predictions from the Python backend for user display."
+            link="https://nfl-game-predictor-420541ce96e2.herokuapp.com/"
+            links={{
+              "View Code":
+                "https://github.com/thomasfaddegon/nfl-game-predictor",
+            }}
+          />
+          <Project
+            image={higherSelfYoga}
+            tags={["UX Design", "Product Strategy", "Figma"]}
+            header="Higher Self Yoga User Journey"
+            text="In designing the user journey for Higher Self Yoga, my aim was to ensure a smooth progression from initial curiosity to deep-seated commitment. The pathway I developed strategically guided users from initial touchpoints across various marketing channels directly to Higher Self Yoga's main website, and ultimately, to their comprehensive community, class, and coaching ecosystem hosted on Circle. The key was to demonstrate the unique value of Higher Self Yoga's offerings at each juncture, presenting users with a blend of freely accessible content and clear opportunities to deepen their practice."
+            link="https://www.figma.com/file/uuAZ9ljB1K5nxlxxJQk2VP/Circle-Flow?type=design&node-id=0%3A1&mode=design&t=YRWvQHhYTdUhzfiM-1"
           />
           <Project
             image={myPortfolio}
@@ -66,7 +109,7 @@ const optimizedBackground = await getImage({
               "Astro",
               "React",
               "Typescript",
-              "Tailwind",
+              "Tailwind CSS",
             ]}
             header="My Portfolio (This Site)"
             text="For this portfolio, I decided to use the static site generator Astro  due to its lightning fast loading times. I used typescirpt for type-saftey and an improved DX, and for CSS I utilized Tailwind for rapid component styling. Even though Astro is designed to ship without JavaScript by default, I found it straightforward to integrate React for those components where interactivity or dynamic data was necessary."
