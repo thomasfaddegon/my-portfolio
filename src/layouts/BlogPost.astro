@@ -80,8 +80,9 @@ const { title, description, pubDate, updatedDate, heroImage } =
         <div class="prose">
           <div class="title">
             <div class="date">
-              <span class="text-purple hover:text-lightBlue"
-                ><a href="/">Thomas Faddegon</a></span
+              <!-- <span class="text-purple hover:text-lightBlue" -->
+              <span class="hover:text-lightBlue"
+                ><a href="/" class="underline">Thomas Faddegon</a></span
               > &nbsp;|&nbsp;
               <FormattedDate date={pubDate} />
               {
@@ -92,7 +93,9 @@ const { title, description, pubDate, updatedDate, heroImage } =
                 )
               }
             </div>
-            <h1>{title}</h1>
+            <div class="py-3">
+              <h1 class="text-lightBlue">{title}</h1>
+            </div>
             <hr />
           </div>
           <slot />
@@ -110,7 +113,7 @@ const { title, description, pubDate, updatedDate, heroImage } =
               >
             </div>
             <div class="flex flex-col gap-2">
-              <a href="/"
+              <a href="/" class="no-underline"
                 ><h4 class="text-purple hover:text-lightBlue mb-1">
                   Thomas Faddegon
                 </h4></a

@@ -4,7 +4,7 @@ import Logo from "./Logo.astro";
 import Icons from "./Icons.astro";
 ---
 
-<header class="w-full nav z-50 bg-transparent">
+<header class="w-full bg-transparent">
   <nav>
     <!-- Desktop & Tablet -->
     <div class="hidden md:flex py-5">
@@ -32,12 +32,14 @@ import Icons from "./Icons.astro";
     </div>
 
     <!-- Mobile -->
-    <div class="bg-black md:hidden border-b border-gray-200 py-2 z-50">
+    <div
+      class="bg-black md:hidden border-b border-gray-200 py-4 fixed top-0 z-50 w-full"
+      id="mobile-nav"
+    >
       <div class="px-6 sm:px-8 flex justify-between">
         <a href="/"><Logo /></a>
         <!-- Mobile Hamburger Menu Button -->
         <button id="hamburger-btn" class="text-white focus:outline-none">
-          <!-- Icon from Heroicons (https://heroicons.com/) -->
           <svg
             class="h-6 w-6"
             fill="none"
@@ -57,17 +59,11 @@ import Icons from "./Icons.astro";
     <!-- Mobile Menu Overlay -->
     <div
       id="mobile-menu"
-      class="inset-0 bg-black pt-8 bg-opacity-90 hidden z-1 h-screen text-xl"
+      class="inset-0 bg-black pt-32 bg-opacity-90 hidden z-1 h-screen text-xl"
     >
       <!-- Mobile Menu Content -->
       <div class="text-white flex items-center h-full flex-col gap-8">
         <HeaderLink href="/" classNames="block text-xl px-4 py-2" text="Home" />
-
-        <!-- <HeaderLink
-          href="/#portfolio"
-          classNames="block text-xl px-4 py-2 bg-blue-700"
-          text="Portfolio"
-        /> -->
         <HeaderLink href="/resume" text="Resume" />
         <HeaderLink href="/blog" text="Blog" />
         <HeaderLink
@@ -79,18 +75,11 @@ import Icons from "./Icons.astro";
         <Icons />
       </div>
     </div>
+    <div class="py-10 md:py-0"></div>
   </nav>
 </header>
 
-<!-- <div class="h-10 bg-black"></div> -->
-
 <style>
-  header {
-    transition:
-      top 0.6s,
-      background-color 0.5s,
-      border-color 0.5s;
-  }
   h2 {
     margin: 0;
     font-size: 1em;
@@ -110,35 +99,6 @@ import Icons from "./Icons.astro";
 </style>
 
 <script>
-  // const header = document.querySelector("header");
-
-  // if (!header) {
-  //   throw new Error("No header found");
-  // }
-
-  // window.addEventListener("scroll", () => {
-  //   const hasScrolled = window.scrollY > 0; // Check if the user has scrolled down
-
-  //   if (window.innerWidth >= 768) {
-  //     if (hasScrolled) {
-  //       // User has scrolled - start transitions
-  //       header.style.top = "0"; // Move the navbar up
-  //       header.style.backgroundColor = `rgba(0, 0, 0, 1)`; // Make background fully opaque
-  //       header.style.borderColor = `rgba(255, 255, 255, 1)`; // Adjust border color if needed
-  //     } else {
-  //       // User is at the top of the page - reset styles
-  //       header.style.top = "20px"; // Original position
-  //       header.style.backgroundColor = `rgba(0, 0, 0, 0)`; // Fully transparent background
-  //       header.style.borderColor = `rgba(255, 255, 255, 0)`; // Transparent border
-  //     }
-  //   } else {
-  //     // For smaller screens, you might want to keep or adjust these settings
-  //     header.style.backgroundColor = ""; // Optionally reset for smaller screens
-  //     header.style.borderColor = "";
-  //     header.style.top = "";
-  //   }
-  // });
-
   const hamburgerBtn = document.getElementById("hamburger-btn");
   const mobileMenu = document.getElementById("mobile-menu");
 

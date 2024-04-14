@@ -13,13 +13,8 @@ import Button from "./Button.astro";
     <div class="padding-global py-24 lg:py-36">
       <div class="padding-extra">
         <div>
-          <h2 class="text-center mb-3">Don't just take it from me.</h2>
-          <h4 class="text-center text-lg mb-10 font-bold">
-            Here's what my clients have had to say.
-          </h4>
-          <div
-            class="flex flex-col lg:flex-row justify-center gap-0 lg:gap-12 mb-8"
-          >
+          <h2 class="mb-12">Here's what my clients have to say.</h2>
+          <div class="flex flex-col lg:flex-row gap-0 lg:gap-24 mb-4">
             <!-- <Carousel client:load /> -->
             <Card
               header="Georgia Pettit"
@@ -27,7 +22,7 @@ import Button from "./Button.astro";
               text="Tom's data-driven approach to website optimization was a game-changer for our agency. His ability to translate analytics into actionable insights led to a remarkable increase in our conversion rates across all of our clients, and his development knowledge was invaluable in implementing these changes."
               icon={georgia}
               link="https://www.linkedin.com/in/georgiapettit/"
-              classes="w-full lg:w-1/2"
+              classes="w-full lg:w-1/2 max-w-lg"
               rounded={true}
             />
             <Card
@@ -36,11 +31,11 @@ import Button from "./Button.astro";
               text="Tom is a person you want on your team. Dependable, efficient, and extremely talented, Tom is a rare breed that can dig in deep into a project and then present it beautifully. He has an eye for beautiful interfaces, the knowledge to back up his choices, and the skill to craft high-end products."
               icon={caroline}
               link="https://www.linkedin.com/in/carolinepadams/"
-              classes="w-full lg:w-1/2"
+              classes="w-full max-w-lg lg:w-1/2 "
               rounded={true}
             />
           </div>
-          <div class="flex justify-center pt-8">
+          <div class="flex pt-8">
             <Button text="Get In Touch" type="tertiary" link="/contact" />
           </div>
         </div>
