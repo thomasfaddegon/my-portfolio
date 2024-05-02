@@ -13,7 +13,10 @@ import Button from "./Button.astro";
     <div class="padding-global py-24 lg:py-36">
       <div class="padding-extra">
         <div>
-          <h2 class="mb-12">Here's what my clients have to say.</h2>
+          <div class="justify-center flex w-full">
+            <h2 class="mb-12">Here's what my clients have to say.</h2>
+          </div>
+
           <div class="flex flex-col lg:flex-row gap-0 lg:gap-24 mb-4">
             <!-- <Carousel client:load /> -->
             <Card
@@ -35,7 +38,7 @@ import Button from "./Button.astro";
               rounded={true}
             />
           </div>
-          <div class="flex pt-8">
+          <div class="flex pt-8 justify-center">
             <Button text="Get In Touch" type="tertiary" link="/contact" />
           </div>
         </div>

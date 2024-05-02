@@ -24,27 +24,8 @@ const optimizedBackground = await getImage({
   <div class="container container-large">
     <div class="padding-global py-32">
       <div class="padding-extra">
-        <h2 class="mb-20 lg:text-center text-5xl">Recent Projects</h2>
+        <h2 class="mb-20">Recent Projects</h2>
         <div class="flex flex-col gap-12">
-          <Project
-            image={beatTrends}
-            tags={[
-              "Front-End Development",
-              "D3",
-              "React",
-              "Python",
-              "Pandas",
-              "Web Scraping",
-              "Data Visualization",
-              "Data Analysis",
-            ]}
-            header="Beat Trends"
-            text="Beat Trends is an interactive graphing app that visualizes the popularity of different dance music genres and artists over time. I started by building a specialized web scraper using Python and Selenium. This tool gathered historical data from the Beatport Top 100, capturing all track listings on the first day of each month from the past decade. After collecting the data, I used Pandas to clean it up and organize it into JSONs organized by year. For the final touch, I combined React and the powerful graph library D3.js to design the UI and visualize the data, making the app both informative and interactive."
-            link="https://beat-trends.netlify.app/"
-            links={{
-              "View Code": "https://github.com/thomasfaddegon/beat-trends",
-            }}
-          />
           <Project
             image={planetFacts}
             tags={[
@@ -60,6 +41,25 @@ const optimizedBackground = await getImage({
             link="https://tomsplanetfacts.netlify.app/"
             links={{
               "View Code": "https://github.com/thomasfaddegon/planet-facts",
+            }}
+          />
+          <Project
+            image={beatTrends}
+            tags={[
+              "Front-End Development",
+              "D3",
+              "React",
+              "Python",
+              "Pandas",
+              "Web Scraping",
+              "Data Visualization",
+              "Data Analysis",
+            ]}
+            header="Beat Trends"
+            text="Beat Trends is an interactive graphing app that visualizes the popularity of different dance music genres and artists over time. I started by building a specialized web scraper using Python and Selenium to gether historical data from the Beatport Top 100. After collecting data from the first of each month for the past decade, I used Pandas to clean it up and organize it into JSONs organized by year. For the final touch, I combined React and the powerful graph library D3.js to design the UI and visualize the data, making the app both informative and interactive."
+            link="https://beat-trends.netlify.app/"
+            links={{
+              "View Code": "https://github.com/thomasfaddegon/beat-trends",
             }}
           />
           <Project
@@ -99,7 +99,7 @@ const optimizedBackground = await getImage({
             image={higherSelfYoga}
             tags={["UX Design", "Product Strategy", "Figma"]}
             header="Higher Self Yoga User Journey"
-            text="In designing the user journey for Higher Self Yoga, my aim was to ensure a smooth progression from initial curiosity to deep-seated commitment. The pathway I developed strategically guided users from initial touchpoints across various marketing channels directly to Higher Self Yoga's main website, and ultimately, to their comprehensive community, class, and coaching ecosystem hosted on Circle. The key was to demonstrate the unique value of Higher Self Yoga's offerings at each juncture, presenting users with a blend of freely accessible content and clear opportunities to deepen their practice."
+            text="This user journey map for Higher Self Yoga follows the progression of users from initial discovery to premium subscription. The pathway I developed gently guides users from initial touchpoints across various marketing channels directly to Higher Self Yoga's main website, and ultimately, to a comprehensive community, class, and coaching ecosystem hosted on Circle. The key was to demonstrate the unique value of Higher Self Yoga's offerings at each step, presenting users with a mix of freely accessible content and premium opportunities to deepen their practice."
             link="https://www.figma.com/file/uuAZ9ljB1K5nxlxxJQk2VP/Circle-Flow?type=design&node-id=0%3A1&mode=design&t=YRWvQHhYTdUhzfiM-1"
           />
           <Project
