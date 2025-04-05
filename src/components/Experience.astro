@@ -1,83 +1,120 @@
 ---
-import Position from "../components/Position.astro";
-import Button from "./Button.astro";
-import Certification from "./Certification.astro";
+import Position from '../components/Position.astro';
+import Button from './Button.astro';
+import Certification from './Certification.astro';
 
-import hackReactorIcon from "../images/icons/hack-reactor-icon.png";
-import hackerRankIcon from "../images/icons/hacker-rank-icon.png";
-import dataCampIcon from "../images/icons/datacamp-icon.png";
-import newPaltzIcon from "../images/icons/new-paltz-icon.png";
+import hackReactorIcon from '../images/icons/hack-reactor-icon.png';
+import hackerRankIcon from '../images/icons/hacker-rank-icon.png';
+import dataCampIcon from '../images/icons/datacamp-icon.png';
+import newPaltzIcon from '../images/icons/new-paltz-icon.png';
 ---
 
 <section>
-  <div class="container container-large">
-    <div class="padding-global pt-24 md:pt-32 pb-16 md:pb-24">
+  <div class='container container-large'>
+    <div class='padding-global pt-24 md:pt-32 pb-16 md:pb-24'>
       <!-- Work Experience -->
-      <!-- <div>
-        <h2 class="mb-12 padding-extra">Work Experience</h2>
+      <div>
+        <h2 class='mb-12 padding-extra'>Work Experience</h2>
         <div
-          class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-20 lg:gap-y-8 padding-extra"
+          class='grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-20 lg:gap-y-8 mb-24 padding-extra'
         >
           <Position
-            title="UX Engineer"
-            location="The Luminary Agency"
-            link="https://theluminaryagency.com/"
-            years="2021 - Present (Part Time)"
-            description="Developed responsive web interfaces using WordPress, Webflow, Squarespace, and HTML/CSS/JavaScript. Created UI wireframe designs with Figma, Relume, and Balsamiq, improving user experience and navigability. Collaborated on brand aesthetics with the design team, ensuring cohesive visual strategies across platforms. Achievements include 1,000% traffic increase, 150% higher conversion rates, and 15% lower bounce rates."
-          />
+            title='Website Manager / Web Developer'
+            location='Distractive'
+            link='https://distractive.xyz'
+            years='2024 - Present'
+          >
+            Maintained and optimized a Sanity-powered CMS for a 600+ page
+            enterprise site <a
+              href='https://polkadot.com/'
+              target='_blank'
+              class='text-lightBlue'>(polkadot.com)</a
+            > using Next.js, Typescript React, and Vercel. Supported design and content
+            teams with new pages, features, and components, while fixing front- and
+            back-end bugs to ensure performance. Ran a technical SEO audit with Ahrefs,
+            raising site health from 68 to 97, and used SEMrush to guide content
+            strategy — increasing organic traffic by 30%. Improved Core Web Vitals
+            from 60–70 to 95–100 by optimizing images, enabling lazy loading, and
+            reducing layout shifts — cutting load times by 50%.
+          </Position>
           <Position
-            title="Product/UX Engineer"
-            location="Higher Self Yoga"
-            link="https://higherselfyoga.org"
-            years="2020 - Present (Part Time)"
-            description="Designed and implemented a product and marketing strategy that grew user traffic from 1,000 to 25,000 monthly and grew email subscriber list from 2,000 to 18,000. Led a team in migrating from WordPress to Webflow to enhance design and functionality, which increased site speed by 50%, reduced bounce rates by 5%, and increased conversions by 25%. Developed a new community platform with optimized user flow and onboarding, integrating features like personalized dashboards, a tagged forum, and real-time messaging."
-          />
+            title='Website Manager / Web Developer'
+            location='The Luminary Agency'
+            link='https://theluminaryagency.com/'
+            years='2020 - 2024'
+          >
+            Developed responsive web interfaces using WordPress, Webflow,
+            Squarespace, and HTML/CSS/JavaScript, ensuring cross-browser
+            compatibility and mobile optimization. Designed and implemented a
+            product and marketing strategy that grew user traffic from 1,000 to
+            25,000 monthly and grew the email subscriber list from 2,000 to
+            23,000. Led a team in migrating from WordPress to Webflow, which
+            increased site speed by 50%, reduced bounce rates by 5%, and
+            increased conversions by 25%.
+          </Position>
 
           <Position
-            title="Director of Digital Marketing"
-            link="https://www.cruiseline.com/"
-            location="Cruiseline.com"
-            years="2018 - 2020"
-            description="Led a team executing a comprehensive marketing and sales strategy that leveraged display, PPC, email, and SEO, increasing conversions by 30%. Proposed and implemented UX/UI enhancements using A/B testing, user recordings, and heatmaps to boost conversions. Guided engineering in aligning product prototypes with optimal UX design principles and business objectives. Conducted in-depth market and sales trend analysis over six years, positioning the company as an industry leader."
-          />
+            title='Director of Digital Marketing'
+            link='https://www.cruiseline.com/'
+            location='Cruiseline.com'
+            years='2018 - 2020'
+          >
+            Led a team executing a comprehensive marketing and sales strategy
+            that leveraged display, PPC, email, and SEO, increasing conversions
+            by 30%. Proposed and implemented UX/UI enhancements using A/B
+            testing, user recordings, and heatmaps to boost conversions. Guided
+            engineering in aligning product prototypes with optimal UX design
+            principles and business objectives. Conducted in-depth market and
+            sales trend analysis over six years, positioning the company as an
+            industry leader.
+          </Position>
+
           <Position
-            title="Inbound Marketing & Content Strategy"
-            location="Cruiseline.com"
-            link="https://www.cruiseline.com/"
-            years="2015 - 2018"
-            description="Crafted a robust content and email strategy, enhancing site and email presence through rebranding, SEO, and compelling editorial pieces which led to a 900% increase in site traffic. Managed weekly analytics, leveraging insights to optimize content and marketing strategies. Collaborated with engineers to create a display ad network, generating upwards of $200k annually. Performed usability testing on new products, writing detailed feedback and bug reports for the dev team to optimize new features before launch."
-          />
+            title='Inbound Marketing & Content Strategy'
+            location='Cruiseline.com'
+            link='https://www.cruiseline.com/'
+            years='2015 - 2018'
+          >
+            Crafted a robust content and email strategy, enhancing site and
+            email presence through rebranding, SEO, and compelling editorial
+            pieces which led to a 900% increase in site traffic. Managed weekly
+            analytics, leveraging insights to optimize content and marketing
+            strategies. Collaborated with engineers to create a display ad
+            network, generating upwards of $200k annually. Performed usability
+            testing on new products, writing detailed feedback and bug reports
+            for the dev team to optimize new features before launch.
+          </Position>
         </div>
-      </div> -->
+      </div>
       <!-- Education & Certifications -->
 
-      <div class="padding-extra">
+      <div class='padding-extra'>
         <!-- <div class="mt-24 items-ceborder-2 border-gray-600"></div> -->
-        <div class="flex w-full justify-center">
-          <h2 class="mb-20">Certifications & Education</h2>
+        <div class='flex w-full'>
+          <h2 class='mb-20'>Certifications & Education</h2>
         </div>
 
         <div>
           <div
-            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-10"
+            class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-10'
           >
             <Certification
-              title="Software Engineer"
-              text="1,000+ hours of coding experience in new and legacy full-stack technologies, computer science foundations, and agile methodologies."
+              title='Software Engineer'
+              text='1,000+ hours of coding experience in new and legacy full-stack technologies, computer science foundations, and agile methodologies.'
               image={hackReactorIcon}
             />
             <Certification
-              title="Javascript Developer"
-              text="Passed certifications for Javascript, React, and Node.js, demonstrating proficiency in core concepts and frameworks."
+              title='Javascript Developer'
+              text='Passed certifications for Javascript, React, and Node.js, demonstrating proficiency in core concepts and frameworks.'
               image={hackerRankIcon}
             />
             <Certification
-              title="Python Data Analyst"
-              text="Achieved profieciency in Python data and visualization libraries, as well as foundations in machine learning and exploratory data analysis."
+              title='Python Data Analyst'
+              text='Achieved profieciency in Python data and visualization libraries, as well as foundations in machine learning and exploratory data analysis.'
               image={dataCampIcon}
             />
             <Certification
-              title="BA & MA in English"
+              title='BA & MA in English'
               text="Received a Master's Degree in English Literature and a BA in English with minors in Philosophy, Political Science, and Religious Studies."
               image={newPaltzIcon}
             />
@@ -85,19 +122,19 @@ import newPaltzIcon from "../images/icons/new-paltz-icon.png";
         </div>
       </div>
       <div
-        class="flex padding-extra md:justify-center mt-8 mb-8 gap-4 flex-col sm:flex-row"
+        class='flex padding-extra md:justify-center mt-8 mb-8 gap-4 flex-col sm:flex-row'
       >
         <Button
-          text="LinkedIn"
-          type="tertiary"
-          link="https://www.linkedin.com/in/thomasfaddegon/"
-          target="_blank"
+          text='LinkedIn'
+          type='tertiary'
+          link='https://www.linkedin.com/in/thomasfaddegon/'
+          target='_blank'
         />
         <Button
-          text="Full Resume"
-          type="secondary"
-          link="/resume"
-          target="_blank"
+          text='Full Resume'
+          type='secondary'
+          link='/resume'
+          target='_blank'
         />
       </div>
     </div>

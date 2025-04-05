@@ -1,6 +1,6 @@
 ---
-import Button from "./Button.astro";
-import H3 from "./H3.astro";
+import Button from './Button.astro';
+import H3 from './H3.astro';
 
 function validateEmail(email: string) {
   // Simple regex for basic email validation
@@ -13,29 +13,29 @@ function validateNotEmpty(value: string | null): boolean {
 }
 
 let formData = {};
-let formErrors = {
-  name: "",
-  email: "",
-  message: "",
+const formErrors = {
+  name: '',
+  email: '',
+  message: '',
 };
 
 // Check for POST method and process form data
-if (Astro.request.method === "POST") {
+if (Astro.request.method === 'POST') {
   try {
     const data = await Astro.request.formData();
-    const name = String(data.get("name") || "");
-    const email = String(data.get("email") || "");
-    const message = String(data.get("message") || "");
+    const name = String(data.get('name') || '');
+    const email = String(data.get('email') || '');
+    const message = String(data.get('message') || '');
 
     // Validate form data
-    formErrors.name = validateNotEmpty(name) ? "" : "First name is required";
-    formErrors.email = validateEmail(email) ? "" : "Email is invalid";
-    formErrors.message = validateNotEmpty(message) ? "" : "Message is required";
+    formErrors.name = validateNotEmpty(name) ? '' : 'First name is required';
+    formErrors.email = validateEmail(email) ? '' : 'Email is invalid';
+    formErrors.message = validateNotEmpty(message) ? '' : 'Message is required';
 
     // If there are no errors, process form submission
     if (!Object.values(formErrors).some(Boolean)) {
       formData = {};
-      return Astro.redirect("/thank-you");
+      return Astro.redirect('/thank-you');
     }
   } catch (error) {
     // Handle errors
@@ -46,51 +46,51 @@ if (Astro.request.method === "POST") {
 }
 ---
 
-<div class="mb-40">
-  <form method="POST" class="space-y-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class='mb-40'>
+  <form method='POST' class='space-y-4'>
+    <div class='grid grid-cols-1 md:grid-cols-2 gap-4'>
       <div>
-        <label for="first_name" class="block text-sm font-medium text-gray-300"
-          ><H3 header="Name" /></label
+        <label for='first_name' class='block text-sm font-medium text-gray-300'
+          ><H3 header='Name' /></label
         >
         <input
-          type="text"
-          name="name"
-          id="name"
+          type='text'
+          name='name'
+          id='name'
           required
-          class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
+          class='w-full p-2 bg-gray-700 border border-gray-600 text-white'
         />
-        {formErrors.name && <p class="text-red-500">{formErrors.name}</p>}
+        {formErrors.name && <p class='text-red-500'>{formErrors.name}</p>}
       </div>
       <div>
-        <label for="email" class="block text-sm font-medium text-gray-300"
-          ><H3 header="email" /></label
+        <label for='email' class='block text-sm font-medium text-gray-300'
+          ><H3 header='email' /></label
         >
         <input
-          type="email"
-          name="email"
-          id="email"
+          type='email'
+          name='email'
+          id='email'
           required
-          class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
+          class='w-full p-2 bg-gray-700 border border-gray-600 text-white'
         />
-        {formErrors.email && <p class="text-red-500">{formErrors.email}</p>}
+        {formErrors.email && <p class='text-red-500'>{formErrors.email}</p>}
       </div>
     </div>
     <div>
-      <label for="message" class="block text-sm font-medium text-gray-300"
-        ><H3 header="Message" /></label
+      <label for='message' class='block text-sm font-medium text-gray-300'
+        ><H3 header='Message' /></label
       >
       <textarea
-        name="message"
-        id="message"
+        name='message'
+        id='message'
         required
-        rows="8"
-        class="w-full p-2 bg-gray-700 border border-gray-600 text-white"
+        rows='8'
+        class='w-full p-2 bg-gray-700 border border-gray-600 text-white'
       ></textarea>
-      {formErrors.message && <p class="text-red-500">{formErrors.message}</p>}
+      {formErrors.message && <p class='text-red-500'>{formErrors.message}</p>}
     </div>
     <div>
-      <Button text="Get In Touch" type="tertiary" link="/contact" />
+      <Button text='Get In Touch' type='tertiary' link='/contact' />
     </div>
   </form>
 </div>

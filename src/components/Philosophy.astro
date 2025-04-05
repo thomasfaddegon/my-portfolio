@@ -1,223 +1,75 @@
 ---
-import Button from "../components/Button.astro";
-import { Image } from "astro:assets";
-import graphic from "../images/graphics/graphic-1.webp";
+import Button from '../components/Button.astro';
+import { Image } from 'astro:assets';
+import graphic from '../images/graphics/website-manager.png';
 ---
 
-<section class="">
-  <div class="bg-purple">
-    <div class="container container-large">
-      <div class="padding-global relative overflow-visible">
-        <div class="padding-extra">
-          <div class="grid grid-cols-1 xl:grid-cols-2 py-24 gap-8">
-            <div class="col-span-1 bg-purple flex items-center">
+<section class=''>
+  <div class='bg-purple'>
+    <div class='container container-large'>
+      <div class='padding-global relative overflow-visible'>
+        <div class='padding-extra'>
+          <div class='grid grid-cols-1 xl:grid-cols-2 py-24 gap-8'>
+            <div class='col-span-1 bg-purple flex items-center'>
               <Image
                 src={graphic}
-                class="rounded-xl"
-                height="500"
-                width="500"
-                alt="ux dev engineering graphic"
+                class='rounded-xl'
+                height='500'
+                width='500'
+                alt='ux dev engineering graphic'
               />
             </div>
-            <div class="col-span-1 bg-purple py-6">
+            <div class='col-span-1 bg-purple py-6'>
               <!-- content -->
-              <div class="flex flex-col gap-4">
-                <!-- <h5>What I Provide</h5>
-                <h2 class="">5 Ways a Product Engineer Can Help Your Team</h2>
-                <div>
-                  <p>
-                    The work of a product engineer spans the realms of design,
-                    development, and product strategy. Here's what we bring to
-                    the table:
-                  </p>
-                  <p>
-                    <span class="font-bold"
-                      >1. Improved Cross-Team Collaboration:
-                    </span>
-                    Product engineers serve as the critical link between design,
-                    dev, and product teams, harmonizing product vision and technical
-                    execution.
-                  </p>
-                  <p>
-                    <span class="font-bold">2. Rapid Prototyping:</span>
-                    We work with the design team to quickly turn concepts into viable
-                    prototypes, accelerating testing and iteration.
-                  </p>
-                  <p>
-                    <span class="font-bold"
-                      >3. Precision in Implementation:</span
-                    >
-                    We translate product and design requirements into robust solutions,
-                    preserving the original design vision while optimizing for performance
-                    and user experience.
-                  </p>
-                  <p>
-                    <span class="font-bold">4. Agility in Development:</span>
-                    During crucial sprints, product engineers can shift into full-time
-                    dev mode and provide an extra set of hands.
-                  </p>
-                  <p>
-                    <span class="font-bold">5. Tech Translator:</span>
-                    Our fluency in the languages of design, engineering, and business
-                    enables us to simplify technical concepts for non-technical stakeholders.
-                  </p> -->
-
+              <div class='flex flex-col'>
                 <h5>What I Provide</h5>
-                <h2 class="">
-                  5 Ways a UX Engineer (Like Me) Can Help Your Team
-                </h2>
-                <div>
-                  <p>
-                    My work as a user-experience engineer spans the realms of
-                    design, development, and product strategy. Here's what I
-                    bring to the table:
-                  </p>
-                  <p>
-                    <span class="font-bold"
-                      >1. A Bridge Between Design and Dev:
-                    </span>
-                    UX engineers are the essential link between design and dev teams,
-                    translating design concepts into technical requirements while
-                    improving cross-team collaboration.
-                  </p>
-                  <p>
-                    <span class="font-bold">2. Rapid Prototyping:</span>
-                    I speed up testing and iteration by helping the design team create
-                    proof-of-concept prototypes using real code.
-                  </p>
-                  <p>
-                    <span class="font-bold"
-                      >3. Precision in Implementation:</span
-                    >
-                    I can accurately translate complex design ideas into fully functional
-                    interfaces, maintaining the original design vision while ensuring
-                    a seamless user experience.
-                  </p>
-                  <p>
-                    <span class="font-bold">4. User-Focused Development:</span>
-                    My code follows UX best practices like responsive design, accessibility,
-                    and predictable navigation.
-                  </p>
+                <h2 class='my-2'>5 Ways I Can Supercharge Your Team</h2>
+                <p>
+                  My work as a website manager spans the realms of development,
+                  content, and product strategy. Here's what I bring to the
+                  table:
+                </p>
+                <p>
+                  <span class='font-bold'
+                    >1. Improved Cross-Team Collaboration:
+                  </span>
 
-                  <p>
-                    <span class="font-bold">5. Tech Translator:</span>
-                    I blend my engineering expertise with my UX skills in empathy,
-                    communication, and copywriting to break down technical concepts
-                    for non-technical users and stakeholders.
-                  </p>
+                  I use my diverse background to act as a bridge between design,
+                  development, and marketing teams, supporting the product
+                  vision with strong technical foundations.
+                </p>
+                <p>
+                  <span class='font-bold'>2. Content-First Approach:</span>
+                  I empower writers and editors to work quickly and efficiently by
+                  structuring websites and CMS's with SEO-driven, scalable content
+                  models.
+                </p>
+                <p>
+                  <span class='font-bold'
+                    >3. Holistic Performance Strategy:</span
+                  >
 
-                  <div>
-                    <span class="font-bold">Learn More:&nbsp;</span>
-                    <a
-                      class="underline"
-                      href="/blog/6-things-ux-engineers-can-do-that-engineers-cant/"
-                    >
-                      6 Things UX Engineers Can Do that (Most) Engineers Can't</a
-                    >
-                  </div>
+                  I synthesize data from diverse sources like user beavhior
+                  metrics, SEO tools, Core Web Vitals to improve website
+                  performance across the board.
+                </p>
 
-                  <!-- <div class="flex flex-col">
-                    <span class="font-bold">Learn More:</span>
-                    <span class="">
-                      -
-                      <a
-                        class="underline"
-                        href="/blog/6-things-ux-engineers-can-do-that-engineers-cant/"
-                      >
-                        6 Things UX Engineers Can Do that (Most) Engineers Can't</a
-                      >
-                    </span>
+                <p>
+                  <span class='font-bold'>4. Stakeholder Alignment:</span>
+                  I pride myself on my ability to demystify technical concepts for
+                  non-technical stakeholders and break down the impact of technical
+                  choices on business outcomes.
+                </p>
+                <p>
+                  <span class='font-bold'
+                    >5. Documentation & Knowledge Sharing:</span
+                  >
+                  I create clear, scalable documentation to make onboarding easier
+                  and preserve institutional knowledge across teams.
+                </p>
 
-                    <span>
-                      -
-                      <a
-                        class="underline"
-                        href="/blog/5-things-ux-engineers-can-do-that-designers-cant/"
-                      >
-                        5 Things UX Engineers Can Do that (Most) UX Designers
-                        Can't</a
-                      >
-                    </span>
-                  </div> -->
-
-                  <!--
-              <div class="flex flex-col gap-4">
-                <h5>My Process</h5>
-                <h2>What does a UX Engineer do?</h2>
-
-                <div class="mb-4">
-                  <p>
-                    My work as a UX Engineer spans the realms of design,
-                    development, and product strategy. I specialize in steering
-                    new creations from the initial concept stage through to
-                    completion, as well as refining existing products with best
-                    practices and data-driven insights.
-                  </p>
-
-                  <p>Here's my five-step process:</p>
-
-                  <p>
-                    <span class="font-bold">Step 1:</span> Understand the business
-                    objectives and goals of the application or website.
-                  </p>
-
-                  <p>
-                    <span class="font-bold">Step 2:</span> Use design intuition to
-                    identify potential areas of friction, confusion, and overlooked
-                    opportunities.
-                  </p>
-
-                  <p>
-                    <span class="font-bold">Step 3:</span> Delve into the available
-                    data, analyzing engagement metrics and conversion rates to validate
-                    and refine my initial observations.
-                  </p>
-
-                  <p>
-                    <span class="font-bold">Step 4:</span> Propose and then personally
-                    implement the necessary changes to the front end.
-                  </p>
-
-                  <p>
-                    <span class="font-bold">Step 5:</span> Track KPIs and conversion
-                    metrics to ensure objectives are met.
-                  </p>
-                </div>
-              </div> -->
-
-                  <!-- <div class="flex flex-col gap-4">
-                <h2>
-                  Code makes things work, <br /> empathy makes them feel right.
-                </h2>
-                <div class="mb-4">
-                  <p>
-                    My work as a UX Engineer spans the realms of design,
-                    development, and product strategy. I specialize in steering
-                    new creations from the initial concept stage through to
-                    completion, as well as refining existing products with best
-                    practices and data-driven insights.
-                  </p>
-                  <p>
-                    My process begins by using my UX design intuition to spot
-                    areas of friction, confusion, and overlooked opportunities.
-                    Next, I delve deeply into the data, analyzing user
-                    engagement metrics and conversion rates to validate my
-                    initial observations and form new hypotheses. Armed with
-                    these insights, I propose and then personally implement the
-                    necessary changes to the front end, making sure that all
-                    KPIs are tracked properly for use in performance
-                    retrospectives and future optimizations.
-                  </p>
-                </div>
-              </div> -->
-
-                  <div class="mt-8">
-                    <Button
-                      link="/contact"
-                      type="primary"
-                      text="Get in Touch"
-                    />
-                  </div>
+                <div class='mt-8'>
+                  <Button link='/contact' type='primary' text='Get in Touch' />
                 </div>
               </div>
             </div>

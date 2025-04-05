@@ -1,121 +1,145 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
-import BaseHead from "../components/BaseHead.astro";
-import Nav from "../components/Nav.astro";
-import Footer from "../components/Footer.astro";
-import ResumePosition from "../components/ResumePosition.astro";
-import DownloadIcon from "../components/DownloadIcon.astro";
-import Button from "../components/Button.astro";
+import BaseHead from '../components/BaseHead.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import ResumePosition from '../components/ResumePosition.astro';
+import DownloadIcon from '../components/DownloadIcon.astro';
+import Button from '../components/Button.astro';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <main class="min-h-screen">
+    <main class='min-h-screen'>
       <Nav title={SITE_TITLE} />
-      <div class="h-10"></div>
+      <div class='h-10'></div>
 
-      <section class="pb-24">
-        <div class="container container-large">
-          <div class="padding-global">
-            <div class="padding-extra flex justify-center items-center">
-              <div class="flex flex-col max-w-4xl gap-2">
+      <section class='pb-24'>
+        <div class='container container-large'>
+          <div class='padding-global'>
+            <div class='padding-extra flex justify-center items-center'>
+              <div class='flex flex-col max-w-4xl gap-2'>
                 <DownloadIcon />
-                <div class="flex flex-row items-center justify-center gap-4">
-                  <div class="text-center text-4xl md:text-5xl mb-2">
+                <div class='flex flex-row items-center justify-center gap-4'>
+                  <div class='text-center text-4xl md:text-5xl mb-2'>
                     Thomas Faddegon
                   </div>
                 </div>
-                <h3 class="text-center text-xl mb-10">
-                  UX Engineer | Brooklyn, NY
+                <h3 class='text-center text-xl mb-10'>
+                  Website Manager | Brooklyn, NY
                 </h3>
-                <p class="mb-8">
-                  Hello! I am a dedicated UX (user-experience) engineer with a
-                  proven track record of leveraging front-end technologies,
-                  product strategy, user-centric design, and data analysis to
-                  enhance digital platforms and achieve business goals. With
-                  over 10 years of web experience building and optimizing web
-                  products, my work has led to significant improvements in
-                  traffic, user engagement, conversion rates, and overall
-                  business growth. My holistic approach blends an empathetic and
-                  intuitive understanding of user behavior with robust
-                  analytical insights, and I am eager to help your team craft
-                  solutions grounded in user needs and refined with data-driven
-                  strategies.
+                <p class='mb-8'>
+                  Hello! I'm a dedicated website manager with a proven track
+                  record of using full-stack development, content strategy,
+                  user-centric design, and data analysis to enhance digital
+                  platforms and achieve business goals. With over 10 years of
+                  experience building and optimizing websites, my work has led
+                  to significant improvements in traffic, user engagement,
+                  conversion rates, and overall business growth. My holistic
+                  approach blends an empathetic and intuitive understanding of
+                  user behavior with robust analytical insights, and I am eager
+                  to help your team craft solutions grounded in user needs and
+                  refined with data-driven strategies.
                 </p>
                 <!-- Technical Profiencies -->
-                <div class="mb-2">
-                  <h2 class="mb-4">Technical Profiencies</h2>
+                <div class='mb-2'>
+                  <h2 class='mb-4'>Skills</h2>
 
-                  <div class="flex flex-col gap-[4px]">
+                  <div class='flex flex-col gap-[4px]'>
                     <span>
-                      <strong>Front-End Development:</strong> Javascript, Typescript,
-                      React, NextJS, Node, REST, Astro, CSS, Sass, SQL, NoSQL.
+                      <strong>Web Development:</strong> HTML/CSS/JavaScript, TypeScript,
+                      React, NextJS, Webflow, Wordpress, AWS
+                    </span>
+                    <span>
+                      <strong>Digital Marketing:</strong> SEO, content strategy,
+                      conversion rate optimization, email marketing, HubSpot, PPC
+                    </span>
+                    <span>
+                      <strong>Data & Analytics:</strong> Google Analytics, funnel/conversion
+                      optimization, A/B testing, data analysis and visualization,
+                      Python
                     </span>
                     <span>
                       <strong>UX/UI Design:</strong> User research, page design and
-                      optimization, user testing, Figma, wireframing.
+                      optimization, user testing, Figma, wireframing
                     </span>
-                    <span>
-                      <strong>Data & Analytics:</strong> GA, funnel/conversion optimization,
-                      data analysis and visualization, Python, NumPy, Pandas.
-                    </span>
-                    <!-- <span>
-                      <strong>Product & Marketing:</strong> Competitor/market analysis,
-                      content strategy, KPI analysis, SEO & SEM, A/B testing.
-                    </span> -->
                   </div>
                 </div>
                 <!-- Professional Experience -->
                 <div>
-                  <h2 class="mb-4 mt-6">Professional Experience</h2>
+                  <h2 class='mb-4 mt-6'>Professional Experience</h2>
                   <ResumePosition
-                    position="UX Engineer"
-                    company="The Luminary Agency"
-                    date="2021 - Present"
-                    link="https://www.theluminaryagency.com/"
+                    position='Website Manager / Web Developer'
+                    company='Distractive'
+                    date='2024 - Present'
+                    link='https://distractive.xyz'
+                  >
+                    <li>
+                      Maintained and optimized a scalable Sanity-powered
+                      headless CMS for a 600+ page enterprise site (<a
+                        href='https://polkadot.com/'
+                        target='_blank'
+                        class='text-lightBlue'>polkadot.com</a
+                      >) using Next.js, Typescript, React, and Vercel. Supported
+                      design and content teams with new pages, features, and
+                      custom components while fixing front- and back-end bugs to
+                      ensure stability and performance.
+                    </li>
+
+                    <li>
+                      Conducted a technical SEO audit using Ahrefs, improving
+                      site health score from 68 to 97, and performed in-depth
+                      keyword research with SEMrush to drive content strategy —
+                      resulting in a 30% increase in organic traffic.
+                    </li>
+
+                    <li>
+                      Improved Core Web Vitals sitewide, boosting scores from
+                      60–70 to 95–100 by optimizing images, implementing
+                      efficient lazy loading, and minimizing layout shifts —
+                      reducing page load times by 50%.
+                    </li>
+
+                    <li>
+                      Built and maintained custom WordPress and Webflow sites;
+                      created reusable templates and CMS schemas to support new
+                      page types and content structures, streamlining site
+                      updates and improving scalability for growing content
+                      needs.
+                    </li>
+                  </ResumePosition>
+                  <ResumePosition
+                    position='Website Manager / Web Developer'
+                    company='The Luminary Agency'
+                    date='2020 - 2024'
+                    link='https://theluminaryagency.com'
                   >
                     <li>
                       Developed responsive web interfaces using WordPress,
                       Webflow, Squarespace, and HTML/CSS/JavaScript.
                     </li>
                     <li>
-                      Created UI wireframe designs with Figma, Relume, and
-                      Balsamiq, improving user experience and navigability.
+                      Designed and implemented a product and marketing strategy
+                      that grew client site traffic from 1,000 to 30,000 monthly
+                      and grew their email list from 2,000 to 23,000.
                     </li>
-                    <li>
-                      Achievements across various clients include a 1,000%
-                      traffic increase, 150% higher conversion rates, and 15%
-                      lower bounce rates.
-                    </li>
-                  </ResumePosition>
-                  <ResumePosition
-                    position="Product/UX Engineer"
-                    company="Higher Self Yoga"
-                    date="2020 - Present"
-                    link="https://higherselfyoga.org/"
-                  >
                     <li>
                       Led a team in migrating from WordPress to Webflow to
                       enhance design and functionality, which increased site
                       speed by 50%, reduced bounce rates by 5%, and increased
                       conversions by 25%.
                     </li>
-                    <li>
-                      Designed and implemented a product and marketing strategy
-                      that grew user traffic from 1,000 to 25,000 monthly and
-                      expanded our email list from 2,000 to 16,000.
-                    </li>
                   </ResumePosition>
                   <ResumePosition
-                    position="Director of Digital Content and Marketing"
-                    company="Cruiseline.com"
-                    date="2018 - 2020"
-                    link="https://cruiseline.com/"
+                    position='Director of Digital Content and Marketing'
+                    company='Cruiseline.com'
+                    date='2018 - 2020'
+                    link='https://cruiseline.com/'
                   >
                     <li>
                       Led multi-dimensional marketing optimization across
@@ -131,10 +155,10 @@ import Button from "../components/Button.astro";
                     </li>
                   </ResumePosition>
                   <ResumePosition
-                    position="Inbound Marketing and Content Strategy"
-                    company="Cruiseline.com"
-                    date="2015 - 2018"
-                    link="https://cruiseline.com/"
+                    position='Inbound Marketing and Content Strategy'
+                    company='Cruiseline.com'
+                    date='2015 - 2018'
+                    link='https://cruiseline.com/'
                   >
                     <li>
                       Crafted a robust content and email strategy, enhancing
@@ -154,9 +178,9 @@ import Button from "../components/Button.astro";
                   </ResumePosition>
                 </div>
                 <!-- Education -->
-                <div class="mb-20">
-                  <h2 class="mb-4 mt-4">Education</h2>
-                  <div class="flex flex-col gap-[4px]">
+                <div class='mb-20'>
+                  <h2 class='mb-4 mt-4'>Education</h2>
+                  <div class='flex flex-col gap-[4px]'>
                     <span>
                       <strong>Galvanize: Hack Reactor &nbsp; | &nbsp;</strong> Advanced
                       Software Engineering Immersive Program
@@ -169,18 +193,18 @@ import Button from "../components/Button.astro";
                   </div>
                 </div>
                 <div
-                  class="flex flex-col md:flex-row items-center justify-center gap-4"
+                  class='flex flex-col md:flex-row items-center justify-center gap-4'
                 >
                   <Button
-                    text="Download"
-                    type="tertiary"
-                    link="/Thomas Faddegon - UX Engineer Resume 2024.pdf"
-                    target="_blank"
+                    text='Download'
+                    type='tertiary'
+                    link='/Thomas Faddegon - Website Manager 2025.pdf'
+                    target='_blank'
                   />
                   <Button
-                    text="Get in Touch"
-                    type="secondary"
-                    link="/contact"
+                    text='Get in Touch'
+                    type='secondary'
+                    link='/contact'
                   />
                 </div>
               </div>
